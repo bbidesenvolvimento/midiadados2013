@@ -1,7 +1,7 @@
 Projeto Midia Dados 2013
 ==========
+Cada pasta contêm um fonte do Mídia dados e em cada plataforma
 
-Branches:
 iOS
 Android
 Windows 8
