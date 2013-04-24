@@ -1,6 +1,6 @@
 [global]
 ApplicationName=tmanager
-AwsCredentialFile=C:\Users\Saulo\.elasticbeanstalk\aws_credential_file
+AwsCredentialFile=/root/.elasticbeanstalk/aws_credential_file
 DevToolsEndpoint=git.elasticbeanstalk.sa-east-1.amazonaws.com
 EnvironmentName=tmanager
 InstanceProfileName=aws-elasticbeanstalk-ec2-role
