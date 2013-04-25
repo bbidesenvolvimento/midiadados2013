@@ -166,6 +166,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
+            // acme_hello_homepage
+            if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]+)$#s', $pathinfo, $matches)) {
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Acme\\HelloBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'acme_hello_homepage'));
+            }
+
             // bbi_tmanager_homepage
             if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]+)$#s', $pathinfo, $matches)) {
                 return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'bbi_tmanager_homepage'));

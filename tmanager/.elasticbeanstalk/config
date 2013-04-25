@@ -2,9 +2,9 @@
 ApplicationName=tmanager
 AwsCredentialFile=/root/.elasticbeanstalk/aws_credential_file
 DevToolsEndpoint=git.elasticbeanstalk.sa-east-1.amazonaws.com
-EnvironmentName=tmanager-env
+EnvironmentName=tmanager-master-env
 InstanceProfileName=aws-elasticbeanstalk-ec2-role
-OptionSettingFile=/home/sfc/Documents/midiadados2013/tmanager/.elasticbeanstalk/optionsettings.tmanager-env
+OptionSettingFile=/home/sfc/Documents/midiadados2013/tmanager/.elasticbeanstalk/optionsettings.tmanager-master-env
 RdsEnabled=No
 Region=sa-east-1
 ServiceEndpoint=https://elasticbeanstalk.sa-east-1.amazonaws.com

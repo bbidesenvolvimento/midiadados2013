@@ -1,3 +1,7 @@
+acme_hello:
+    resource: "@AcmeHelloBundle/Resources/config/routing.yml"
+    prefix:   /
+
 bbi_tmanager:
     resource: "@BbiTmanagerBundle/Resources/config/routing.yml"
     prefix:   /
