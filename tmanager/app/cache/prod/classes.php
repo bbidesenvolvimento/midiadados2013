@@ -6573,11 +6573,12 @@ namespace
 /**
  * Stores the Twig configuration.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @package twig
+ * @author  Fabien Potencier <fabien@symfony.com>
  */
 class Twig_Environment
 {
-    const VERSION = '1.12.3';
+    const VERSION = '1.12.2';
     protected $charset;
     protected $loader;
     protected $debug;
@@ -7236,15 +7237,15 @@ class Twig_Environment
      */
     public function addFilter($name, $filter = null)
     {
+        if ($this->extensionInitialized) {
+            throw new LogicException(sprintf('Unable to add filter "%s" as extensions have already been initialized.', $name));
+        }
         if (!$name instanceof Twig_SimpleFilter && !($filter instanceof Twig_SimpleFilter || $filter instanceof Twig_FilterInterface)) {
             throw new LogicException('A filter must be an instance of Twig_FilterInterface or Twig_SimpleFilter');
         }
         if ($name instanceof Twig_SimpleFilter) {
             $filter = $name;
             $name = $filter->getName();
-        }
-        if ($this->extensionInitialized) {
-            throw new LogicException(sprintf('Unable to add filter "%s" as extensions have already been initialized.', $name));
         }
         $this->staging->addFilter($name, $filter);
     }
@@ -7311,15 +7312,15 @@ class Twig_Environment
      */
     public function addTest($name, $test = null)
     {
+        if ($this->extensionInitialized) {
+            throw new LogicException(sprintf('Unable to add test "%s" as extensions have already been initialized.', $name));
+        }
         if (!$name instanceof Twig_SimpleTest && !($test instanceof Twig_SimpleTest || $test instanceof Twig_TestInterface)) {
             throw new LogicException('A test must be an instance of Twig_TestInterface or Twig_SimpleTest');
         }
         if ($name instanceof Twig_SimpleTest) {
             $test = $name;
             $name = $test->getName();
-        }
-        if ($this->extensionInitialized) {
-            throw new LogicException(sprintf('Unable to add test "%s" as extensions have already been initialized.', $name));
         }
         $this->staging->addTest($name, $test);
     }
@@ -7360,15 +7361,15 @@ class Twig_Environment
      */
     public function addFunction($name, $function = null)
     {
+        if ($this->extensionInitialized) {
+            throw new LogicException(sprintf('Unable to add function "%s" as extensions have already been initialized.', $name));
+        }
         if (!$name instanceof Twig_SimpleFunction && !($function instanceof Twig_SimpleFunction || $function instanceof Twig_FunctionInterface)) {
             throw new LogicException('A function must be an instance of Twig_FunctionInterface or Twig_SimpleFunction');
         }
         if ($name instanceof Twig_SimpleFunction) {
             $function = $name;
             $name = $function->getName();
-        }
-        if ($this->extensionInitialized) {
-            throw new LogicException(sprintf('Unable to add function "%s" as extensions have already been initialized.', $name));
         }
         $this->staging->addFunction($name, $function);
     }
@@ -7643,7 +7644,8 @@ namespace
 /**
  * Interface implemented by extension classes.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @package    twig
+ * @author     Fabien Potencier <fabien@symfony.com>
  */
 interface Twig_ExtensionInterface
 {
@@ -7938,7 +7940,6 @@ class Twig_Extension_Core extends Twig_Extension
             new Twig_SimpleFilter('split', 'twig_split_filter'),
             new Twig_SimpleFilter('sort', 'twig_sort_filter'),
             new Twig_SimpleFilter('merge', 'twig_array_merge'),
-            new Twig_SimpleFilter('batch', 'twig_array_batch'),
             // string/array filters
             new Twig_SimpleFilter('reverse', 'twig_reverse_filter', array('needs_environment' => true)),
             new Twig_SimpleFilter('length', 'twig_length_filter', array('needs_environment' => true)),
@@ -7953,8 +7954,8 @@ class Twig_Extension_Core extends Twig_Extension
             new Twig_SimpleFilter('e', 'twig_escape_filter', array('needs_environment' => true, 'is_safe_callback' => 'twig_escape_filter_is_safe')),
         );
         if (function_exists('mb_get_info')) {
-            $filters[] = new Twig_SimpleFilter('upper', 'twig_upper_filter', array('needs_environment' => true));
-            $filters[] = new Twig_SimpleFilter('lower', 'twig_lower_filter', array('needs_environment' => true));
+            $filters['upper'] = new Twig_Filter_Function('twig_upper_filter', array('needs_environment' => true));
+            $filters['lower'] = new Twig_Filter_Function('twig_lower_filter', array('needs_environment' => true));
         }
         return $filters;
     }
@@ -8258,18 +8259,15 @@ function twig_number_format_filter(Twig_Environment $env, $number, $decimal = nu
     return number_format((float) $number, $decimal, $decimalPoint, $thousandSep);
 }
 /**
- * URL encodes a string as a path segment or an array as a query string.
+ * URL encodes a string.
  *
- * @param string|array $url A URL or an array of query parameters
- * @param bool         $raw true to use rawurlencode() instead of urlencode
+ * @param string $url A URL
+ * @param bool   $raw true to use rawurlencode() instead of urlencode
  *
  * @return string The URL encoded value
  */
 function twig_urlencode_filter($url, $raw = false)
 {
-    if (is_array($url)) {
-        return http_build_query($url, '', '&');
-    }
     if ($raw) {
         return rawurlencode($url);
     }
@@ -8946,31 +8944,6 @@ function twig_constant($constant, $object = null)
     }
     return constant($constant);
 }
-/**
- * Batches item.
- *
- * @param array   $items An array of items
- * @param integer $size  The size of the batch
- * @param string  $fill  A string to fill missing items
- *
- * @return array
- */
-function twig_array_batch($items, $size, $fill = null)
-{
-    if ($items instanceof Traversable) {
-        $items = iterator_to_array($items, false);
-    }
-    $size = ceil($size);
-    $result = array_chunk($items, $size, true);
-    if (null !== $fill) {
-        $last = count($result) - 1;
-        $result[$last] = array_merge(
-            $result[$last],
-            array_fill(0, $size - count($result[$last]), $fill)
-        );
-    }
-    return $result;
-}
 
 }
 
@@ -9125,7 +9098,8 @@ namespace
 /**
  * Interface all loaders must implement.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @package    twig
+ * @author     Fabien Potencier <fabien@symfony.com>
  */
 interface Twig_LoaderInterface
 {
@@ -9178,7 +9152,8 @@ namespace
 /**
  * Marks a content as safe.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @package    twig
+ * @author     Fabien Potencier <fabien@symfony.com>
  */
 class Twig_Markup implements Countable
 {
@@ -9215,7 +9190,8 @@ namespace
 /**
  * Interface implemented by all compiled templates.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @package    twig
+ * @author     Fabien Potencier <fabien@symfony.com>
  * @deprecated since 1.12 (to be removed in 2.0)
  */
 interface Twig_TemplateInterface
@@ -9263,7 +9239,8 @@ namespace
 /**
  * Default base class for compiled templates.
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @package twig
+ * @author  Fabien Potencier <fabien@symfony.com>
  */
 abstract class Twig_Template implements Twig_TemplateInterface
 {

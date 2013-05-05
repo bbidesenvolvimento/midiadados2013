@@ -1,7 +1,0 @@
-parameters:
-#    bbi_tmanager.example.class: Bbi\TmanagerBundle\Example
-
-services:
-#    bbi_tmanager.example:
-#        class: %bbi_tmanager.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

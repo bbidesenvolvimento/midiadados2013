@@ -25,10 +25,7 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         $allow = array();
         $pathinfo = rawurldecode($pathinfo);
 
-        // bbi_tmanager_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]+)$#s', $pathinfo, $matches)) {
-            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'bbi_tmanager_homepage'));
-        }
+
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }

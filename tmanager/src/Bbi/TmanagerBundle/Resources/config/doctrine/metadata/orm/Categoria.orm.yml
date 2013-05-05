@@ -1,0 +1,22 @@
+Categoria:
+    type: entity
+    table: categoria
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nome:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        tipo:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

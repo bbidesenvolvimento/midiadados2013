@@ -1,3 +1,0 @@
-bbi_tmanager_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: BbiTmanagerBundle:Default:index }

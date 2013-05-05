@@ -1,0 +1,56 @@
+<?php
+
+namespace Bbi\TmanagerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Item
+ *
+ * @ORM\Table(name="item")
+ * @ORM\Entity
+ */
+class Item
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titulo", type="string", length=255, nullable=true)
+     */
+    private $titulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="link", type="string", length=255, nullable=true)
+     */
+    private $link;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ad", type="string", length=255, nullable=true)
+     */
+    private $ad;
+
+    /**
+     * @var \Categoria
+     *
+     * @ORM\ManyToOne(targetEntity="Categoria")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="categoria_id", referencedColumnName="id")
+     * })
+     */
+    private $categoria;
+
+
+}
