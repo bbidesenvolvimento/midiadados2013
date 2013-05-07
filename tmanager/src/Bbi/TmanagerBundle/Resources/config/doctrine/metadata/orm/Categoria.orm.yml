@@ -11,12 +11,11 @@ Categoria:
                 strategy: IDENTITY
         nome:
             type: string
-            length: 45
+            length: 255
             fixed: false
             nullable: true
-        tipo:
-            type: string
-            length: 45
-            fixed: false
+        ordem:
+            type: integer
+            unsigned: false
             nullable: true
     lifecycleCallbacks: {  }

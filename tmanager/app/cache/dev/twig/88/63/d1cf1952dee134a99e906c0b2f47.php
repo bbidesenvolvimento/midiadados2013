@@ -41,20 +41,14 @@ class __TwigTemplate_8863d1cf1952dee134a99e906c0b2f47 extends Twig_Template
         echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "link"), "html", null, true);
         echo "</td>
         </tr>
-        <tr>
-            <th>Ad</th>
-            <td>";
-        // line 19
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "ad"), "html", null, true);
-        echo "</td>
-        </tr>
+
     </tbody>
 </table>
 
 <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 26
+        // line 23
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item"), "html", null, true);
         echo "\">
             Back to the list
@@ -62,7 +56,7 @@ class __TwigTemplate_8863d1cf1952dee134a99e906c0b2f47 extends Twig_Template
     </li>
     <li>
         <a href=\"";
-        // line 31
+        // line 28
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item_edit", array("id" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
         echo "\">
             Edit
@@ -70,11 +64,11 @@ class __TwigTemplate_8863d1cf1952dee134a99e906c0b2f47 extends Twig_Template
     </li>
     <li>
         <form action=\"";
-        // line 36
+        // line 33
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item_delete", array("id" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
         echo "\" method=\"post\">
             ";
-        // line 37
+        // line 34
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "delete_form"), 'widget');
         echo "
             <button type=\"submit\">Delete</button>
@@ -96,6 +90,6 @@ class __TwigTemplate_8863d1cf1952dee134a99e906c0b2f47 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  78 => 37,  74 => 36,  66 => 31,  58 => 26,  48 => 19,  41 => 15,  34 => 11,  27 => 7,  19 => 1,);
+        return array (  72 => 34,  68 => 33,  60 => 28,  52 => 23,  41 => 15,  34 => 11,  27 => 7,  19 => 1,);
     }
 }

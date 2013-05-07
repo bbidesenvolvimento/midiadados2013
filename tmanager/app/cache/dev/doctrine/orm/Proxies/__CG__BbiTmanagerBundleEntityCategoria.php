@@ -63,22 +63,22 @@ class Categoria extends \Bbi\TmanagerBundle\Entity\Categoria implements \Doctrin
         return parent::getNome();
     }
 
-    public function setTipo($tipo)
+    public function setOrdem($ordem)
     {
         $this->__load();
-        return parent::setTipo($tipo);
+        return parent::setOrdem($ordem);
     }
 
-    public function getTipo()
+    public function getOrdem()
     {
         $this->__load();
-        return parent::getTipo();
+        return parent::getOrdem();
     }
 
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'id', 'nome', 'tipo');
+        return array('__isInitialized__', 'id', 'nome', 'ordem');
     }
 
     public function __clone()

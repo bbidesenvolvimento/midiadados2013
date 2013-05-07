@@ -23,7 +23,7 @@ class __TwigTemplate_f9b330d7a1b19b7453396e15d0cdb790 extends Twig_Template
         <tr>
             <th>Id</th>
             <th>Nome</th>
-            <th>Tipo</th>
+            <th>Ordem</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -47,7 +47,7 @@ class __TwigTemplate_f9b330d7a1b19b7453396e15d0cdb790 extends Twig_Template
             echo "</td>
             <td>";
             // line 17
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "tipo"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "ordem"), "html", null, true);
             echo "</td>
             <td>
                 <ul>

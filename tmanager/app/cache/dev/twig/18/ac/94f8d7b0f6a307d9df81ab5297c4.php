@@ -35,10 +35,10 @@ class __TwigTemplate_18ac94f8d7b0f6a307d9df81ab5297c4 extends Twig_Template
         echo "</td>
         </tr>
         <tr>
-            <th>Tipo</th>
+            <th>Ordem</th>
             <td>";
         // line 15
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "tipo"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "ordem"), "html", null, true);
         echo "</td>
         </tr>
     </tbody>

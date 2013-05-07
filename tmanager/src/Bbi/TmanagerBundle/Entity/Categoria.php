@@ -24,16 +24,16 @@ class Categoria
     /**
      * @var string
      *
-     * @ORM\Column(name="nome", type="string", length=45, nullable=true)
+     * @ORM\Column(name="nome", type="string", length=255, nullable=true)
      */
     private $nome;
 
     /**
-     * @var string
+     * @var integer
      *
-     * @ORM\Column(name="tipo", type="string", length=45, nullable=true)
+     * @ORM\Column(name="ordem", type="integer", nullable=true)
      */
-    private $tipo;
+    private $ordem;
 
 
 
@@ -71,25 +71,25 @@ class Categoria
     }
 
     /**
-     * Set tipo
+     * Set ordem
      *
-     * @param string $tipo
+     * @param integer $ordem
      * @return Categoria
      */
-    public function setTipo($tipo)
+    public function setOrdem($ordem)
     {
-        $this->tipo = $tipo;
+        $this->ordem = $ordem;
     
         return $this;
     }
 
     /**
-     * Get tipo
+     * Get ordem
      *
-     * @return string 
+     * @return integer 
      */
-    public function getTipo()
+    public function getOrdem()
     {
-        return $this->tipo;
+        return $this->ordem;
     }
 }

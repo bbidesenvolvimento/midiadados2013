@@ -24,16 +24,16 @@ class Categoria
     /**
      * @var string
      *
-     * @ORM\Column(name="nome", type="string", length=45, nullable=true)
+     * @ORM\Column(name="nome", type="string", length=255, nullable=true)
      */
     private $nome;
 
     /**
-     * @var string
+     * @var integer
      *
-     * @ORM\Column(name="tipo", type="string", length=45, nullable=true)
+     * @ORM\Column(name="ordem", type="integer", nullable=true)
      */
-    private $tipo;
+    private $ordem;
 
 
 }
