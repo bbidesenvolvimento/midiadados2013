@@ -28,7 +28,7 @@ class ItemController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria(13);
+        $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria(12);
         
 
         return array(
@@ -66,6 +66,9 @@ class ItemController extends Controller
             }
             //echo "],";
     }
+    // echo"<pre>";
+    // var_dump($arr);
+    // echo"</pre>";
     $json = json_encode($arr);
     echo $json;
 
@@ -89,35 +92,58 @@ class ItemController extends Controller
         
         $categorias = $em->getRepository('BbiTmanagerBundle:Categoria')->findAll();
         //$entities = $em->getRepository('BbiTmanagerBundle:Item')->findAll();
-   
-    $arr = array();
-    foreach ($categorias as $categoria) {
-            $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria($categoria->getId());
-            //echo "\"".$categoria->getNome()."\":[{";
-            array_push($arr, $categoria->getNome());
-            foreach ($entities as $entitie) {
-                //array_push($arr, array('titulo' => $entitie->getTitulo(),
-                //'link' => "http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink(),
-                //'ad' => ''
-                //));
-                echo "\"titulo:"."\"".$entitie->getTitulo()."\"<br>";
-                echo "\"link:"."\"http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink()."\"<br>";
-                echo "\"ad:"."\"\"}<br><br>".'';
-            }
-            //echo "],";
-    }
-    $json = json_encode($arr);
-    echo $json;
+       
+        $arr = array();
 
+        foreach ($categorias as $categoria) {
+                $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria($categoria->getId());
+                //echo "\"".$categoria->getNome()."\":[{";
+                array_push($arr, $categoria->getNome());
+                $i=0;        
+                foreach ($entities as $entitie) {
+                     array_push($arr,self::catjsonoff($entitie->getTitulo(),$categoria->getNome(),$i+1));
+                       
+                       $i++;
+                }
+                
+                /*echo "<h1>".$categoria->getId()."</h1>";
+                echo "<h2>".$categoria->getNome()."</h2>";
+                echo "<h3>".$i."</h3>";
+                echo "<hr>";*/
+            }
+
+   /*echo"<pre>";
+    var_dump($arr);
+    echo"</pre>";*/
+    $json = json_encode($arr);
+    echo $json; 
 
         return array(
             'entities' => $entities,
             'categorias' => $categorias,
-            );
+        );
     }
 
 
-/**
+    public function catjsonoff($titulo,$nome,$rep){
+        //"link": "/images/midiaDados/offline/mercadoDemografia/1.jpg",
+        
+       /* echo "\"titulo:"."\"".$titulo."\"<br>";
+        echo "\"link:"."\"images/midiaDados/offline/" .$nome.'/'.$rep.'.png<br>'."";    
+        echo "\"ad:"."\"\"}<br><br>".'';
+
+        return array_push($arr, array('titulo' => $titulo,
+            'link' => "images/midiaDados/offline/" .$nome.'/'.$rep.'.png',
+            'ad' => ''
+        ));*/
+        return array('titulo' => $titulo,
+            'link' => "/images/midiaDados/offline/" .$nome.'/'.$rep.'.png',
+            'ad' => ''
+        );
+        
+    }
+
+    /**
      * Lists all Item entities.
      *
      * @Route("/jsonlista", name="jsonlista")
