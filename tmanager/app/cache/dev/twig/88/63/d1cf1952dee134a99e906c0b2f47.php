@@ -17,27 +17,36 @@ class __TwigTemplate_8863d1cf1952dee134a99e906c0b2f47 extends Twig_Template
     {
         // line 1
         echo "<h1>Item</h1>
-
+<ul>
+    <li>
+        <a href=\"";
+        // line 4
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item_new"), "html", null, true);
+        echo "\">
+            Create a new entry
+        </a>
+    </li>
+</ul>
 <table class=\"record_properties\">
     <tbody>
         <tr>
             <th>Id</th>
             <td>";
-        // line 7
+        // line 13
         echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "id"), "html", null, true);
         echo "</td>
         </tr>
         <tr>
             <th>Titulo</th>
             <td>";
-        // line 11
+        // line 17
         echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "titulo"), "html", null, true);
         echo "</td>
         </tr>
         <tr>
             <th>Link</th>
             <td>";
-        // line 15
+        // line 21
         echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "link"), "html", null, true);
         echo "</td>
         </tr>
@@ -48,7 +57,7 @@ class __TwigTemplate_8863d1cf1952dee134a99e906c0b2f47 extends Twig_Template
 <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 23
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item"), "html", null, true);
         echo "\">
             Back to the list
@@ -56,7 +65,7 @@ class __TwigTemplate_8863d1cf1952dee134a99e906c0b2f47 extends Twig_Template
     </li>
     <li>
         <a href=\"";
-        // line 28
+        // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item_edit", array("id" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
         echo "\">
             Edit
@@ -64,11 +73,11 @@ class __TwigTemplate_8863d1cf1952dee134a99e906c0b2f47 extends Twig_Template
     </li>
     <li>
         <form action=\"";
-        // line 33
+        // line 39
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item_delete", array("id" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
         echo "\" method=\"post\">
             ";
-        // line 34
+        // line 40
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "delete_form"), 'widget');
         echo "
             <button type=\"submit\">Delete</button>
@@ -90,6 +99,6 @@ class __TwigTemplate_8863d1cf1952dee134a99e906c0b2f47 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  72 => 34,  68 => 33,  60 => 28,  52 => 23,  41 => 15,  34 => 11,  27 => 7,  19 => 1,);
+        return array (  81 => 40,  77 => 39,  69 => 34,  61 => 29,  50 => 21,  43 => 17,  36 => 13,  24 => 4,  19 => 1,);
     }
 }

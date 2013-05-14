@@ -83,6 +83,7 @@
   'BbiTmanagerBundle:Item:new.html.twig' => '/var/www/midiadados2013/tmanager/src/Bbi/TmanagerBundle/Resources/views/Item/new.html.twig',
   'BbiTmanagerBundle:Item:index.html.twig' => '/var/www/midiadados2013/tmanager/src/Bbi/TmanagerBundle/Resources/views/Item/index.html.twig',
   'BbiTmanagerBundle:Item:show.html.twig' => '/var/www/midiadados2013/tmanager/src/Bbi/TmanagerBundle/Resources/views/Item/show.html.twig',
+  'BbiTmanagerBundle:Item:json.html.twig' => '/var/www/midiadados2013/tmanager/src/Bbi/TmanagerBundle/Resources/views/Item/json.html.twig',
   'AcmeDemoBundle:Welcome:index.html.twig' => '/var/www/midiadados2013/tmanager/src/Acme/DemoBundle/Resources/views/Welcome/index.html.twig',
   'AcmeDemoBundle::layout.html.twig' => '/var/www/midiadados2013/tmanager/src/Acme/DemoBundle/Resources/views/layout.html.twig',
   'AcmeDemoBundle:Demo:contact.html.twig' => '/var/www/midiadados2013/tmanager/src/Acme/DemoBundle/Resources/views/Demo/contact.html.twig',
