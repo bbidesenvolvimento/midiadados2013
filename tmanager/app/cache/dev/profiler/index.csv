@@ -1312,3 +1312,8 @@ cee31487599449f150a3316ebc8a50c220403834,127.0.0.1,GET,http://tmanager.local/app
 059ae0dd0a51f058836d96b28cde0f700ca2ee77,127.0.0.1,GET,http://tmanager.local/app_dev.php/item/jsonlista,1368565158,
 30f86f87e1fe79e8d848575210698deb7445192c,127.0.0.1,GET,http://tmanager.local/app_dev.php/item/json,1368565160,
 ffd5a916b797beb13f6adb4191b045f781e478d8,127.0.0.1,GET,http://tmanager.local/app_dev.php/item/jsonoff,1368565163,
+e624e6ca1a951ed6e859900f816c75f257a3d6f9,127.0.0.1,GET,http://tmanager.local/app_dev.php/item/json,1368620267,
+19e976d4577375454b707a57f6dc0fb94a028c56,127.0.0.1,GET,http://tmanager.local/app_dev.php/item/jsonoff,1368620268,
+4d398603eaeaf9c70bf22ba15e87a4582b5eb33a,127.0.0.1,GET,http://tmanager.local/app_dev.php/item/jsonlista,1368620268,
+23c7a202f3847117c8c9162cfa76bb5c84b4c409,127.0.0.1,GET,http://tmanager.local/app_dev.php/item/,1368620269,
+87267618520e0994b2249a6d4c66b16357cfad5e,127.0.0.1,GET,http://tmanager.local/app_dev.php/categoria/,1368620269,
