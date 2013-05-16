@@ -28,17 +28,15 @@ class ItemType extends AbstractType
                 }));
     }
 
-
-/*
-$builder->add('users', 'entity', array(
-    'class' => 'AcmeHelloBundle:User',
-    'query_builder' => function(EntityRepository $er) {
-        return $er->createQueryBuilder('u')
-            ->orderBy('u.username', 'ASC');
-    },
-));
-*/
-
+    /*
+    $builder->add('users', 'entity', array(
+        'class' => 'AcmeHelloBundle:User',
+        'query_builder' => function(EntityRepository $er) {
+            return $er->createQueryBuilder('u')
+                ->orderBy('u.username', 'ASC');
+        },
+    ));
+    */
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {

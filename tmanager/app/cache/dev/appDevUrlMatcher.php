@@ -241,6 +241,21 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\ItemController::indexAction',  '_route' => 'item',);
                 }
 
+                // json
+                if ($pathinfo === '/item/json') {
+                    return array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\ItemController::jsonAction',  '_route' => 'json',);
+                }
+
+                // jsonoff
+                if ($pathinfo === '/item/jsonoff') {
+                    return array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\ItemController::jsonoffAction',  '_route' => 'jsonoff',);
+                }
+
+                // jsonlista
+                if ($pathinfo === '/item/jsonlista') {
+                    return array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\ItemController::jsonlistaAction',  '_route' => 'jsonlista',);
+                }
+
                 // item_show
                 if (0 === strpos($pathinfo, '/item') && preg_match('#^/item/(?P<id>[^/]+)/show$#s', $pathinfo, $matches)) {
                     return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\ItemController::showAction',)), array('_route' => 'item_show'));

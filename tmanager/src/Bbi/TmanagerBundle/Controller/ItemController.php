@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Bbi\TmanagerBundle\Entity\Item;
+use Bbi\TmanagerBundle\Entity\Categoria;
 use Bbi\TmanagerBundle\Form\ItemType;
 
 /**
@@ -27,11 +28,152 @@ class ItemController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BbiTmanagerBundle:Item')->findAll();
+        $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria(12);
+        
 
         return array(
             'entities' => $entities,
+            );
+    }
+
+    /**
+     * Lists all Item entities.
+     *
+     * @Route("/json", name="json")
+     * @Template()
+     */
+    public function jsonAction()
+    {
+        header('Content-Type: text/html; charset=utf-8');
+        $em = $this->getDoctrine()->getManager();
+        
+        $categorias = $em->getRepository('BbiTmanagerBundle:Categoria')->findAll();
+        //$entities = $em->getRepository('BbiTmanagerBundle:Item')->findAll();
+   
+    $arr = array();
+    foreach ($categorias as $categoria) {
+            $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria($categoria->getId());
+            //echo "\"".$categoria->getNome()."\":[{";
+            array_push($arr, $categoria->getNome());
+            foreach ($entities as $entitie) {
+                array_push($arr, array('titulo' => $entitie->getTitulo(),
+                'link' => "http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink(),
+                'ad' => ''
+                ));
+                //echo "\"titulo:"."\"".$entitie->getTitulo()."\",";
+                //echo "\"link:"."\"http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink()."\",";
+                //echo "\"ad:"."\"\"},".'';
+            }
+            //echo "],";
+    }
+    // echo"<pre>";
+    // var_dump($arr);
+    // echo"</pre>";
+    $json = json_encode($arr);
+    echo $json;
+
+
+        return array(
+            'entities' => $entities,
+            'categorias' => $categorias,
+            );
+    }
+
+    /**
+     * Lists all Item entities.
+     *
+     * @Route("/jsonoff", name="jsonoff")
+     * @Template()
+     */
+    public function jsonoffAction()
+    {
+        header('Content-Type: text/html; charset=utf-8');
+        $em = $this->getDoctrine()->getManager();
+        
+        $categorias = $em->getRepository('BbiTmanagerBundle:Categoria')->findAll();
+        //$entities = $em->getRepository('BbiTmanagerBundle:Item')->findAll();
+       
+        $arr = array();
+
+        foreach ($categorias as $categoria) {
+                $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria($categoria->getId());
+                //echo "\"".$categoria->getNome()."\":[{";
+                array_push($arr, $categoria->getNome());
+                $i=0;        
+                foreach ($entities as $entitie) {
+                     array_push($arr,self::catjsonoff($entitie->getTitulo(),$categoria->getNome(),$i+1));
+                       
+                       $i++;
+                }
+                
+                /*echo "<h1>".$categoria->getId()."</h1>";
+                echo "<h2>".$categoria->getNome()."</h2>";
+                echo "<h3>".$i."</h3>";
+                echo "<hr>";*/
+            }
+
+   /*echo"<pre>";
+    var_dump($arr);
+    echo"</pre>";*/
+    $json = json_encode($arr);
+    echo $json; 
+
+        return array(
+            'entities' => $entities,
+            'categorias' => $categorias,
         );
+    }
+
+
+    public function catjsonoff($titulo,$nome,$rep){
+        //"link": "/images/midiaDados/offline/mercadoDemografia/1.jpg",
+        
+       /* echo "\"titulo:"."\"".$titulo."\"<br>";
+        echo "\"link:"."\"images/midiaDados/offline/" .$nome.'/'.$rep.'.png<br>'."";    
+        echo "\"ad:"."\"\"}<br><br>".'';
+
+        return array_push($arr, array('titulo' => $titulo,
+            'link' => "images/midiaDados/offline/" .$nome.'/'.$rep.'.png',
+            'ad' => ''
+        ));*/
+        return array('titulo' => $titulo,
+            'link' => "/images/midiaDados/offline/" .$nome.'/'.$rep.'.png',
+            'ad' => ''
+        );
+        
+    }
+
+    /**
+     * Lists all Item entities.
+     *
+     * @Route("/jsonlista", name="jsonlista")
+     * @Template()
+     */
+    public function jsonlistaAction()
+    {
+        header('Content-Type: text/html; charset=utf-8');
+        $em = $this->getDoctrine()->getManager();
+        
+        $categorias = $em->getRepository('BbiTmanagerBundle:Categoria')->findAll();
+        $entities = $em->getRepository('BbiTmanagerBundle:Item')->findAll();
+        
+   
+    $arr = array();
+    foreach ($categorias as $categoria) {
+            $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria($categoria->getId());
+            echo "<h1>".$categoria->getId().'-'.$categoria->getNome()."</h1><br>";
+            foreach ($entities as $entitie) {
+                echo "<b>titulo:</b>".$entitie->getTitulo()."<br>";
+                echo "<b>link:"."</b>http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink()."<br>";
+                echo "<b>ad:"."</b>".'<br>';
+            }
+ 
+        }
+
+        return array(
+            'entities' => $entities,
+            'categorias' => $categorias,
+            );
     }
 
     /**
@@ -55,7 +197,7 @@ class ItemController extends Controller
         return array(
             'entity'      => $entity,
             'delete_form' => $deleteForm->createView(),
-        );
+            );
     }
 
     /**
@@ -72,7 +214,7 @@ class ItemController extends Controller
         return array(
             'entity' => $entity,
             'form'   => $form->createView(),
-        );
+            );
     }
 
     /**
@@ -99,7 +241,7 @@ class ItemController extends Controller
         return array(
             'entity' => $entity,
             'form'   => $form->createView(),
-        );
+            );
     }
 
     /**
@@ -125,7 +267,7 @@ class ItemController extends Controller
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        );
+            );
     }
 
     /**
@@ -160,7 +302,7 @@ class ItemController extends Controller
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        );
+            );
     }
 
     /**
@@ -192,8 +334,8 @@ class ItemController extends Controller
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder(array('id' => $id))
-            ->add('id', 'hidden')
-            ->getForm()
+        ->add('id', 'hidden')
+        ->getForm()
         ;
     }
 }

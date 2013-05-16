@@ -99,7 +99,7 @@ const FRAME_HEIGHT = 795 + 22;
 const TOP_MENU_HEIGHT = 48;
 const MENU_LINK_ONLINE = 'https://www.bbi.net.br/json2.php';
 var MENU_SIZE = 335;
-var isOffline = false;
+var isOffline = true;
 var currentElement = null;
 var initialState = true;
 

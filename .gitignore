@@ -1,4 +1,4 @@
-app/bootstrap.php.cache
-app/cache/*
-app/logs/*
+tmanager/app/bootstrap.php.cache
+tmanager/app/cache/*
+tmanager/app/logs/*
 composer.phar
