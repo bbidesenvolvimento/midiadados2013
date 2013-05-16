@@ -213,6 +213,8 @@ ol > li:last-child, ul > li:last-child {
 /*///////////////////////////////////////*/
 
 #preloader {
+    background-image: url(../images/misc/menu-bg.png);
+
     position:fixed;
     z-index:2500;
     top:0;
