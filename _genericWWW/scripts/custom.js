@@ -95,7 +95,7 @@ var dashes =
 };
 
 const FRAME_WIDTH = 1024;
-const FRAME_HEIGHT = 795 + 22;
+const FRAME_HEIGHT = 768;// 795 + 22;
 const TOP_MENU_HEIGHT = 48;
 const MENU_LINK_ONLINE = 'https://www.bbi.net.br/json2.php';
 var MENU_SIZE = 335;
@@ -104,23 +104,50 @@ var currentElement = null;
 var initialState = true;
 
 
+var app = {
+    initialize: function () {
+        this.bindEvents();
+    },
+    bindEvents: function () {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('resume', this.onDeviceResume, false);
+        document.addEventListener('pause', this.onDevicePause, false);
+    },
+    onDeviceReady: function () {
+
+
+        $('#theHeader').css('opacity', 0);
+        if (navigator.network.connection.type == 'none') {
+            isOffline = true;
+            loadMenu();
+        } else {
+            isOffline = false;
+            loadMenu();
+        }
+
+    },
+    onDeviceResume: function () {
+        location.reload(true);
+        // onReadyPage();
+    },
+    onDevicePause: function () {
+
+
+    }
+};
+
 $(window).load(function () {
-    $('#theHeader').css('opacity', 0);
+    // mobile || web
+    if (true) {
+        app.initialize();
+    } else {
+        isOffline = false;
+        loadMenu()
+    }
+
 });
 
 $(document).ready(function () {
-
-    loadMenu();
-    /* $("#initButton").click(
-     function () {
-     $('#theHeader').animate({opacity: 1});
-
-     showSideBar();
-     $("#initButton").unbind('click');
-
-     }
-     )  */
-
 
 });
 
@@ -179,7 +206,7 @@ function showSideBar() {
 }
 
 function hideSideBar() {
-    setTitle('Mídia Dados Brasil 2013');
+    setTitle('MDB Pro 2013');
     $('#mainPageContent').animate({
         left: '0px',
         width: $(window).width() + 'px'
@@ -356,21 +383,22 @@ function generateApp(menuData) {
 
     $(".sidebar-logo").click(function () {
         initialState = true;
+        $('.submenu').hide('slow', 'easeInOutExpo');
+        $('#theHeader').animate({opacity: 0});
         $('#theContentContainer').animate({opacity: 0}, 500, 'linear', function () {
             $('#theContentContainer').html('<div class="emptyContent" id="theEmptyContent"></div>').animate({opacity: 1}, 500);
             showSideBar();
-            $('#theHeader').animate({opacity: 0});
             setTimeout(onResize, 500);
             setTimeout(startLoop, 600);
 
         });
 
     });
-    $("#tutorialIcon").click(function(){
+    $("#tutorialIcon").click(function () {
         $.fancybox(
             '<img src="images/tutorial.png"> </img> '
 
-          );
+        );
     });
     showSideBar();
     $("#mainPageContent, #sideBar").hide();
@@ -378,19 +406,19 @@ function generateApp(menuData) {
 
     $("#preloader").delay(600).fadeOut("slow", function () {
         $("#initMovie").css({
-            'background-image'      : 'url(images/splashes/horizontal.png)',
-            'background-repeat'     : 'no-repeat',
-            'background-position'   : 'center center',
-            'background-size'       : 'contain',
-            'margin-left'           : '0px !important',
-            'margin-right'          : '0px !important',
-            'width'                 : $(window).width(),
-            'height'                :  $(window).height()
+            'background-image': 'url(images/splashes/horizontal.png)',
+            'background-repeat': 'no-repeat',
+            'background-position': 'center center',
+            'background-size': 'contain',
+            'margin-left': '0px !important',
+            'margin-right': '0px !important',
+            'width': $(window).width(),
+            'height': $(window).height()
         });
 
         $("#initMovie").fadeIn('slow', function () {
 
-             $("#initMovie").delay(1500).fadeOut('slow', function () {
+            $("#initMovie").delay(1500).fadeOut('slow', function () {
 
                 $("#mainPageContent, #sideBar").fadeIn('slow', function () {
 
@@ -403,7 +431,7 @@ function generateApp(menuData) {
 
 
         /* COM VIDEO
-        $("#initMovie").fadeIn('slow', function () {
+         $("#initMovie").fadeIn('slow', function () {
          $("#initMovie").css({
 
          'width': $(window).width(),
@@ -529,7 +557,7 @@ function setTitle(title) {
 function startLoop() {
     /*
      COM VIDEO  (mexer css theEmptyContent
-    $("#theEmptyContent").videoBG({
+     $("#theEmptyContent").videoBG({
      webm: 'videos/loop.webm',
      scale: true,
      zIndex: 0,

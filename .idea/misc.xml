@@ -357,6 +357,9 @@
   <component name="EncodingComponent">
     <option name="projectEncoding" />
   </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="IdProvider" IDEtalkID="796C495F7DE5A04E99BB51BFD8380B4F" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true">
     <output url="file://$PROJECT_DIR$/out" />

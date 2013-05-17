@@ -95,7 +95,7 @@ var dashes =
 };
 
 const FRAME_WIDTH = 1024;
-const FRAME_HEIGHT = 795 + 22;
+const FRAME_HEIGHT = 768;// 795 + 22;
 const TOP_MENU_HEIGHT = 48;
 const MENU_LINK_ONLINE = 'https://www.bbi.net.br/json2.php';
 var MENU_SIZE = 335;
@@ -104,11 +104,6 @@ var currentElement = null;
 var initialState = true;
 
 
-
-
-
-
- 
 var app = {
     initialize: function () {
         this.bindEvents();
@@ -142,45 +137,17 @@ var app = {
 };
 
 $(window).load(function () {
-               // mobile || web
-                if (true) {
-                app.initialize();
-                } else {
-                isOffline = false;
-                loadMenu()
-                }
-
-});
-
-$(document).ready(function () {
-             /*
-                  $('#theHeader').css('opacity', 0);
-                  if (navigator.network.connection.type == 'none') {
-                  isOffline = true;
-                  loadMenu();
-                  } else {
-                  isOffline = false;
-                  loadMenu();
-                  }*/
-                
-                  
-     // mobile || web
- /*  if (true) {
+    // mobile || web
+    if (true) {
         app.initialize();
     } else {
         isOffline = false;
         loadMenu()
-    }*/
-    /* $("#initButton").click(
-     function () {
-     $('#theHeader').animate({opacity: 1});
+    }
 
-     showSideBar();
-     $("#initButton").unbind('click');
+});
 
-     }
-     )  */
-
+$(document).ready(function () {
 
 });
 
@@ -239,7 +206,7 @@ function showSideBar() {
 }
 
 function hideSideBar() {
-    setTitle('Mídia Dados Brasil 2013');
+    setTitle('MDB Pro 2013');
     $('#mainPageContent').animate({
         left: '0px',
         width: $(window).width() + 'px'
@@ -416,10 +383,11 @@ function generateApp(menuData) {
 
     $(".sidebar-logo").click(function () {
         initialState = true;
+        $('.submenu').hide('slow', 'easeInOutExpo');
+        $('#theHeader').animate({opacity: 0});
         $('#theContentContainer').animate({opacity: 0}, 500, 'linear', function () {
             $('#theContentContainer').html('<div class="emptyContent" id="theEmptyContent"></div>').animate({opacity: 1}, 500);
             showSideBar();
-            $('#theHeader').animate({opacity: 0});
             setTimeout(onResize, 500);
             setTimeout(startLoop, 600);
 

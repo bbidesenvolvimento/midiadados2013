@@ -7,7 +7,11 @@
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World, MyActivity"
+            android:text="Hello World, midiadadospro2013"
             />
+    <Chronometer
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chronometer"/>
 </LinearLayout>
 
