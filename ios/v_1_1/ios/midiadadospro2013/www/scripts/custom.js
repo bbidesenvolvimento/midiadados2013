@@ -326,7 +326,7 @@ function generateApp(menuData) {
                                     '       frameborder="0"  scrolling="no" ' +
                                     '       width="' + FRAME_WIDTH + '" height="' + FRAME_HEIGHT + '" > ' +
                                     '   </iframe>' +
-                                    ' <div id="dashCaptions"></div>' +
+                                   // ' <div id="dashCaptions"></div>' +
                                     '</div>'
 
 
