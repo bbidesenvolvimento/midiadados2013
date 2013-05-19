@@ -141,7 +141,7 @@ $(window).load(function () {
     if (true) {
         app.initialize();
     } else {
-        isOffline = false;
+        isOffline = true;
         loadMenu()
     }
 
@@ -153,7 +153,9 @@ $(document).ready(function () {
 
 
 function loadMenu() {
-    if (isOffline)   generateApp(offlineData);
+    if (isOffline) {
+        generateApp(offlineData);
+    }
     else {
         $.ajax({
             type: 'GET',
@@ -299,13 +301,23 @@ function generateApp(menuData) {
                                 '<div id="myFrame"' +
                                     'style="  ' +
                                     '   text-align:center; ' +
-                                    '   background-position: 50% 50%; ' +
+                                    // '   background-position: 0 0; ' +
                                     '   background-image: url(' + $(elem).data('element') + '); ' +
                                     '   background-repeat:no-repeat;' +
-                                    '   width:100%;' +
-                                    '   height:100%;' +
-                                    '   background-size: contain;"  ' +
-                                    '></div>');
+                                    '   width:' + FRAME_WIDTH + 'px;' +
+                                    '   height:' + FRAME_HEIGHT + 'px;' +
+
+                                    ' "></div>');
+                            console.log('<div id="myFrame"' +
+                                'style="  ' +
+                                '   text-align:center; ' +
+                                // '   background-position: 0 0; ' +
+                                '   background-image: url(' + $(elem).data('element') + '); ' +
+                                '   background-repeat:no-repeat;' +
+                                '   width:' + FRAME_WIDTH + 'px;' +
+                                '   height:' + FRAME_HEIGHT + 'px;' +
+
+                                '></div>')
                             $('#myFrame').bind('click', function () {
                                 $.fancybox(
                                     "<h2>Atenção!</h2>" +
@@ -326,7 +338,7 @@ function generateApp(menuData) {
                                     '       frameborder="0"  scrolling="no" ' +
                                     '       width="' + FRAME_WIDTH + '" height="' + FRAME_HEIGHT + '" > ' +
                                     '   </iframe>' +
-                                   // ' <div id="dashCaptions"></div>' +
+                                    // ' <div id="dashCaptions"></div>' +
                                     '</div>'
 
 
