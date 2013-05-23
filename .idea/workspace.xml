@@ -18,19 +18,19 @@
     <list default="true" id="c741ec4b-0952-43ee-b2e2-1d9f02177038" name="Default" comment="" />
     <ignored path="midiadados2013.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/custom.js" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369277444086" ignored="false" />
-    <file path="/index.html" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369271732383" ignored="false" />
+    <file path="/custom.js" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369350882416" ignored="false" />
+    <file path="/index.html" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369345711149" ignored="false" />
     <file path="/a.dummy" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369284063055" ignored="false" />
-    <file path="/style.css" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1368679681370" ignored="false" />
+    <file path="/style.css" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369345905255" ignored="false" />
     <file path="/videobg.js" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1368495440859" ignored="false" />
     <file path="/framework.css" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1368499802280" ignored="false" />
-    <file path="/fragment.java" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369283540168" ignored="false" />
+    <file path="/fragment.java" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369347070829" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1368677626025" ignored="false" />
-    <file path="/midiadadospro2013.java" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1368677651724" ignored="false" />
+    <file path="/midiadadospro2013.java" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369348155941" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369284786882" ignored="false" />
     <file path="/index.js" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1368678276623" ignored="false" />
     <file path="/strings.xml" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1368680637537" ignored="false" />
-    <file path="/config.xml" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369282801035" ignored="false" />
+    <file path="/config.xml" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369347683374" ignored="false" />
     <file path="$PROJECT_DIR$/../../projetos_php/SOL01/inc/head.php" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369055163443" ignored="false" />
     <file path="$PROJECT_DIR$/../../projetos_php/SOL01/base.html" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369055163443" ignored="false" />
     <file path="$PROJECT_DIR$/../../projetos_php/SOL01/estilo.css" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369080179806" ignored="false" />
@@ -46,8 +46,11 @@
     <file path="/_ranking.php" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369078363010" ignored="false" />
     <file path="/index.php" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369080256234" ignored="false" />
     <file path="/DummyFile.xpath" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369282489075" ignored="false" />
-    <file path="/a.xml" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369283753960" ignored="false" />
+    <file path="/a.xml" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369286002492" ignored="false" />
     <file path="$PROJECT_DIR$/android/gen/br/net/bbi/Manifest.java" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369284941766" ignored="false" />
+    <file path="/fragment.js2" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369286402507" ignored="false" />
+    <file path="/Nod2.mxml" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369286535879" ignored="false" />
+    <file path="$PROJECT_DIR$/../../projetos_Flash/testeUIIntelliJ/nod2/src/Nod2.mxml" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369286556879" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,13 +114,33 @@
       <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_genericWWW/scripts/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="404" column="93" selection-start="12875" selection-end="12875" vertical-scroll-proportion="0.8787879">
+            <state line="144" column="12" selection-start="3527" selection-end="3527" vertical-scroll-proportion="0.42133814">
               <folding>
                 <element signature="e#13#2408#0" expanded="false" />
-                <marker date="1369285266206" expanded="false" signature="6001:6042" placeholder="..." />
-                <marker date="1369285266206" expanded="false" signature="6231:6252" placeholder="..." />
-                <marker date="1369285266206" expanded="false" signature="10816:10860" placeholder="..." />
+                <marker date="1369350882715" expanded="false" signature="5996:6037" placeholder="..." />
+                <marker date="1369350882715" expanded="false" signature="6226:6247" placeholder="..." />
+                <marker date="1369350882715" expanded="false" signature="10811:10855" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="midiadadospro2013.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android/src/br/net/bbi/midiadadospro2013.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="38" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_genericWWW/styles/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="-1.2307693">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,7 +148,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_genericWWW/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="14" selection-start="3617" selection-end="3617" vertical-scroll-proportion="-10.192307">
+            <state line="13" column="82" selection-start="830" selection-end="830" vertical-scroll-proportion="-8.32">
               <folding />
             </state>
           </provider>
@@ -134,7 +157,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="64" selection-start="1806" selection-end="1806" vertical-scroll-proportion="-14.769231">
+            <state line="49" column="92" selection-start="2274" selection-end="2274" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,7 +166,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/assets/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="35" selection-start="3826" selection-end="3826" vertical-scroll-proportion="-11.653846">
+            <state line="53" column="63" selection-start="3548" selection-end="3823" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -152,7 +175,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/res/xml/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="65" selection-start="304" selection-end="304" vertical-scroll-proportion="10.274509">
+            <state line="39" column="60" selection-start="1490" selection-end="1761" vertical-scroll-proportion="-15.36">
               <folding />
             </state>
           </provider>
@@ -170,7 +193,7 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.9615384">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -192,6 +215,10 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="Z:\DESENVOLVIMENTO\projetos_phonegap\midiadados2013\keysAndroid\keystoreAndroid" />
+    <option name="KEY_ALIAS" value="br.net.bbi.midiadados" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -204,22 +231,22 @@
         <option value="$PROJECT_DIR$/android/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/android/assets/www/scripts/custom.js" />
         <option value="$PROJECT_DIR$/android/assets/www/index.html" />
-        <option value="$PROJECT_DIR$/android/src/br/net/bbi/midiadadospro2013.java" />
         <option value="$PROJECT_DIR$/_genericWWW/styles/style.css" />
-        <option value="$PROJECT_DIR$/_genericWWW/index.html" />
         <option value="$PROJECT_DIR$/android/res/xml/config.xml" />
         <option value="$PROJECT_DIR$/android/assets/www/config.xml" />
         <option value="$PROJECT_DIR$/android/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/_genericWWW/index.html" />
+        <option value="$PROJECT_DIR$/android/src/br/net/bbi/midiadadospro2013.java" />
         <option value="$PROJECT_DIR$/_genericWWW/scripts/custom.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1688" />
-    <option name="y" value="22" />
-    <option name="width" value="1696" />
-    <option name="height" value="1036" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -249,6 +276,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -263,6 +291,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midiadados2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bbi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midiadados2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="_genericWWW" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -277,33 +333,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="jdk.selected.JAVA_MODULE" value="Android 2.3.3 Platform" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.sourceCode.XML" />
+    <property name="ExportedApkPath" value="Z:\DESENVOLVIMENTO\projetos_phonegap\midiadados2013\keysAndroid\midiadados2013.apk" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="ExportedModule" value="android" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../CTP08_android" />
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4df17f845bd37f7f" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="233" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="teste" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -319,9 +377,6 @@
             <mapping local="$PROJECT_DIR$/android" />
           </mappings>
         </serverdata>
-      </server>
-      <server id="4f7ecfb8-29c3-449d-9780-2b2d85e496ec">
-        <serverdata />
       </server>
       <server id="509bd2c3-37a6-4b33-b349-b43e389bcb04">
         <serverdata>
@@ -346,9 +401,6 @@
             <mapping local="$PROJECT_DIR$/android" />
           </mappings>
         </serverdata>
-      </server>
-      <server id="77d572a6-5fb4-4b22-842b-4466b4a85c4a">
-        <serverdata />
       </server>
       <server id="b6979e42-79b3-4f80-9c0f-38c6133406d9">
         <serverdata>
@@ -616,10 +668,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1688" y="22" width="1696" height="1036" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.6002278" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -631,29 +682,30 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21787025" sideWeight="0.6833713" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21771611" sideWeight="0.6843267" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3166287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12045454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.6002278" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3156733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12030905" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33940774" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Colour Chooser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.6002278" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.6002278" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Colour Chooser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -728,23 +780,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ios/v_1_1/ios/midiadadospro2013/wwwOLD/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="97" selection-start="1261" selection-end="1261" vertical-scroll-proportion="-17.653847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_genericWWW/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="14" selection-start="3617" selection-end="3617" vertical-scroll-proportion="-10.192307">
-          <folding />
-        </state>
+        <state line="27" column="97" selection-start="1261" selection-end="1261" vertical-scroll-proportion="-17.653847" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="42" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0662768">
-          <folding />
-        </state>
+        <state line="2" column="42" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0662768" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/ant.properties">
@@ -756,19 +797,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/android/res/layout/main.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/br/net/bbi/midiadadospro2013.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="203" selection-end="203" vertical-scroll-proportion="-4.08">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/assets/www/images/icones/144.png">
@@ -785,61 +817,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/android/local.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/project.properties">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/build.xml">
+    <entry file="file://$PROJECT_DIR$/_genericWWW/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.9615384">
+        <state line="2" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="-1.2307693">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/res/xml/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="65" selection-start="304" selection-end="304" vertical-scroll-proportion="10.274509">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.IntelliJIdea12/system/compile-server/midiadados2013_9f73f1cb/targets/java-production/android/android/generated_sources/aapt/br/net/bbi/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="341" selection-end="341" vertical-scroll-proportion="0.25708884">
+        <state line="39" column="60" selection-start="1490" selection-end="1761" vertical-scroll-proportion="-15.36">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/assets/www/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="35" selection-start="3826" selection-end="3826" vertical-scroll-proportion="-11.653846">
+        <state line="53" column="63" selection-start="3548" selection-end="3823" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_genericWWW/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="82" selection-start="830" selection-end="830" vertical-scroll-proportion="-8.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/src/br/net/bbi/midiadadospro2013.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="38" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="64" selection-start="1806" selection-end="1806" vertical-scroll-proportion="-14.769231">
+        <state line="49" column="92" selection-start="2274" selection-end="2274" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_genericWWW/scripts/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="404" column="93" selection-start="12875" selection-end="12875" vertical-scroll-proportion="0.8787879">
+        <state line="144" column="12" selection-start="3527" selection-end="3527" vertical-scroll-proportion="0.42133814">
           <folding>
             <element signature="e#13#2408#0" expanded="false" />
-            <marker date="1369285266206" expanded="false" signature="6001:6042" placeholder="..." />
-            <marker date="1369285266206" expanded="false" signature="6231:6252" placeholder="..." />
-            <marker date="1369285266206" expanded="false" signature="10816:10860" placeholder="..." />
+            <marker date="1369350882715" expanded="false" signature="5996:6037" placeholder="..." />
+            <marker date="1369350882715" expanded="false" signature="6226:6247" placeholder="..." />
+            <marker date="1369350882715" expanded="false" signature="10811:10855" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -884,7 +928,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>Android 4.0 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

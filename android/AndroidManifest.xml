@@ -5,6 +5,14 @@
           android:versionCode="6"
 
         >
+
+
+    <preference name="useBrowserHistory" value="false" />
+    <preference name="exit-on-suspend" value="true" />
+    <preference name="fullscreen" value="true" />
+    <preference name="keepRunning " value="false" />
+    <preference name="EnableViewportScale" value="true" />
+
     <uses-sdk android:minSdkVersion="10"/>
 
     <supports-screens

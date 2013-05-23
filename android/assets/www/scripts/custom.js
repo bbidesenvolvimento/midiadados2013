@@ -118,7 +118,7 @@ var app = {
     onDeviceReady: function () {
 
 
-        $('#theHeader').css('opacity', 0);
+
         if (navigator.network.connection.type == 'none') {
             isOffline = true;
             loadMenu();
@@ -139,12 +139,13 @@ var app = {
 };
 
 $(window).load(function () {
+    $('#theHeader').css('opacity', 0);
     //  console.log(navigator.network.connection.type);
     // mobile || web
     if (false) {
         app.initialize();
     } else {
-        isOffline = false;
+        isOffline = true;
         loadMenu()
     }
 
@@ -346,7 +347,7 @@ function generateApp(menuData) {
 
 
                             );
-                            onResize()
+
                             resizeIframe();
                         }
 
@@ -453,7 +454,7 @@ function generateApp(menuData) {
                 $("#mainPageContent, #sideBar").fadeIn('slow', function () {
 
                     //
-
+                    onResize();
                     startLoop();
                 });
             });
@@ -494,6 +495,7 @@ function generateApp(menuData) {
 
     });
 
+
 }
 
 //resize controller
@@ -504,6 +506,7 @@ window.onresize = function () {
 
 
 function onResize() {
+
     if (initialState) {
         var diff = $('#mainPageContent').position().left < MENU_SIZE ? 0 : MENU_SIZE;
         $('#theContentContainer, #theEmptyContent,.videoBG_wrapper , .videoBG, #theVideoBG,#mainPageContent, #leMainTitle ').css('width', $(window).width() - diff);
@@ -554,6 +557,9 @@ function onResize() {
         //$('#leBody').css('width', $(window).width());
         // $('#leBody').css('-webkit-transform','scale('+scale+')');
     }
+
+
+
 
 }
 

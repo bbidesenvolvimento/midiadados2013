@@ -37,7 +37,7 @@
     <preference name="exit-on-suspend" value="false" />
     <preference name="fullscreen" value="true" />
     <preference name="keepRunning " value="false" />
-
+    <preference name="EnableViewportScale" value="true" />
 
 
 

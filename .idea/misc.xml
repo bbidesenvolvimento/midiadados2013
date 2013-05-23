@@ -361,7 +361,7 @@
     <entry_points version="2.0" />
   </component>
   <component name="IdProvider" IDEtalkID="796C495F7DE5A04E99BB51BFD8380B4F" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
