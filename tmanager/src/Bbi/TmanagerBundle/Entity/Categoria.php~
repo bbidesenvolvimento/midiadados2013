@@ -29,11 +29,11 @@ class Categoria
     private $nome;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="ordem", type="integer", nullable=true)
+     * @ORM\Column(name="segmento", type="string", length=100, nullable=true)
      */
-    private $ordem;
+    private $segmento;
 
 
 }

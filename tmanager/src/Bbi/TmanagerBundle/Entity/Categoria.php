@@ -29,11 +29,11 @@ class Categoria
     private $nome;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="ordem", type="integer", nullable=true)
+     * @ORM\Column(name="segmento", type="string", length=100, nullable=true)
      */
-    private $ordem;
+    private $segmento;
 
 
 
@@ -71,25 +71,25 @@ class Categoria
     }
 
     /**
-     * Set ordem
+     * Set segmento
      *
-     * @param integer $ordem
+     * @param string $segmento
      * @return Categoria
      */
-    public function setOrdem($ordem)
+    public function setSegmento($segmento)
     {
-        $this->ordem = $ordem;
+        $this->segmento = $segmento;
     
         return $this;
     }
 
     /**
-     * Get ordem
+     * Get segmento
      *
-     * @return integer 
+     * @return string 
      */
-    public function getOrdem()
+    public function getSegmento()
     {
-        return $this->ordem;
+        return $this->segmento;
     }
 }

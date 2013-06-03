@@ -12,7 +12,8 @@ class CategoriaType extends AbstractType
     {
         $builder
             ->add('nome')
-            ->add('ordem')
+            //->add('ordem')
+            ->add('segmento')
         ;
     }
 
