@@ -1,12 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 
-@-viewport {
-    width: 768px;
-    min-zoom: 0.25;
-    max-zoom: 1;
-
-  }
 @font-face {
     font-family: MidiaFonte ;
     src: url(../fonts/Myriad_Condensed.ttf);
@@ -113,6 +107,7 @@ iframe {
     margin-top: -48px;
     width: 100%;
     height: 100%;
+
 
 }
 
@@ -354,7 +349,7 @@ h5 {
     background-size: contain;
 
     width: 293px;
-    height: 80px;
+    height: 98px;
     cursor: pointer;
 }
 
@@ -418,7 +413,7 @@ h5 {
 }
 
 .header {
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 99999;
     height: 48px;
@@ -499,7 +494,7 @@ h5 {
 }
 
 .header-tutorial {
-    position: fixed;
+    position: absolute;
     z-index: 12;
     /* background-image:url(../images/misc/menu-item/tutorial.png);
      background-repeat:no-repeat;

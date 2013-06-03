@@ -24,6 +24,7 @@ var dashes =
         icon: "images/midiaDados/televisao3.png",
         color: "#d33f90",
         title: "TELEVISÃO"
+
     },
     tvAssinatura: {
         id: "tvAssinatura",
@@ -84,6 +85,7 @@ var dashes =
         icon: "images/midiaDados/americaLatina3.png",
         color: "#f07731",
         title: "AMÉRICA LATINA"
+
     },
     midiaInternacional: {
         id: "midiaInternacional",
@@ -95,7 +97,7 @@ var dashes =
 };
 
 const FRAME_WIDTH = 1024;
-const FRAME_HEIGHT = 768;// 795 + 22;
+const FRAME_HEIGHT = 795 + 22;
 const TOP_MENU_HEIGHT = 48;
 const MENU_LINK_ONLINE = 'https://www.bbi.net.br/json2.php';
 var MENU_SIZE = 335;
@@ -116,7 +118,7 @@ var app = {
     onDeviceReady: function () {
 
 
-        $('#theHeader').css('opacity', 0);
+
         if (navigator.network.connection.type == 'none') {
             isOffline = true;
             loadMenu();
@@ -137,6 +139,8 @@ var app = {
 };
 
 $(window).load(function () {
+    $('#theHeader').css('opacity', 0);
+    //console.log(navigator.network.connection.type);
     // mobile || web
     if (true) {
         app.initialize();
@@ -227,7 +231,7 @@ function hideSideBar() {
 
 
 function generateApp(menuData) {
-
+    var counter = 0;
     $.each(dashes, function (key, value) {
         if (menuData[key]) {
             var s = value.color;
@@ -236,7 +240,7 @@ function generateApp(menuData) {
             var rgb = "rgba(" + parseInt(matches[1], 16) + "," + parseInt(matches[2], 16) + "," + parseInt(matches[3], 16) + ",1);";
 
             $("#leMenu").append(
-                ' <div class="menu-item " style="background-image: none; background-color:' + rgb + '" id="itemMenu' + key + '" >\n' +
+                ' <div class="menu-item " style="background-image: none; background-color:' + rgb + '" id="itemMenu' + key + '" data-dash="' + counter++ + '" >\n' +
                     // '<strong class="features-icon"></strong>\n' +
                     '<strong class="" style="background-image:url(' + value.icon + ');background-position:0 9px;"></strong>\n' +
                     '<a class="menu-disabled deploy-submenu theFont" href="#">' + value.title + '</a>\n' +
@@ -343,7 +347,7 @@ function generateApp(menuData) {
 
 
                             );
-                            onResize()
+
                             resizeIframe();
                         }
 
@@ -377,17 +381,32 @@ function generateApp(menuData) {
 
 
     $('.deploy-submenu').click(function () {
+        var topScroll = 0;
         if (!$(this).parent().find('.submenu').is(":visible")) {
             $('.submenu').hide('slow', 'easeInOutExpo');
             $(this).parent().find('.submenu').toggle(500, 'easeInOutExpo');
-            $('.itemDash').each(function () {
-                /* if($(this).height()>35){
-                 $(this).css('line-height','15px !important');
-                 }   */
-            });
+            /*   $('.itemDash').each(function () {
+             if($(this).height()>35){
+             $(this).css('line-height','15px !important');
+             }
+             });   */
+            topScroll = 118 + (parseInt($($(this).parent()[0]).data('dash')) * 51);
+
+
         } else {
             $(this).parent().find('.submenu').toggle(500, 'easeInOutExpo');
+
+
         }
+
+        $("#page-sidebar-scroll").animate({
+            scrollTop: topScroll
+        });
+
+
+        // setTimeout(function(){
+
+        //},1000)
 
 
         return false;
@@ -435,7 +454,7 @@ function generateApp(menuData) {
                 $("#mainPageContent, #sideBar").fadeIn('slow', function () {
 
                     //
-
+                    onResize();
                     startLoop();
                 });
             });
@@ -476,6 +495,7 @@ function generateApp(menuData) {
 
     });
 
+
 }
 
 //resize controller
@@ -486,6 +506,7 @@ window.onresize = function () {
 
 
 function onResize() {
+
     if (initialState) {
         var diff = $('#mainPageContent').position().left < MENU_SIZE ? 0 : MENU_SIZE;
         $('#theContentContainer, #theEmptyContent,.videoBG_wrapper , .videoBG, #theVideoBG,#mainPageContent, #leMainTitle ').css('width', $(window).width() - diff);
@@ -536,6 +557,9 @@ function onResize() {
         //$('#leBody').css('width', $(window).width());
         // $('#leBody').css('-webkit-transform','scale('+scale+')');
     }
+
+
+
 
 }
 
