@@ -142,10 +142,10 @@ $(window).load(function () {
     $('#theHeader').css('opacity', 0);
     //  console.log(navigator.network.connection.type);
     // mobile || web
-    if (true) {
+    if (false) {
         app.initialize();
     } else {
-        isOffline = true;
+        isOffline = false;
         loadMenu()
     }
 
