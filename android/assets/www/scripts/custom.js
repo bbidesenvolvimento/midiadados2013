@@ -97,13 +97,41 @@ var dashes =
 };
 
 const FRAME_WIDTH = 1024;
-const FRAME_HEIGHT = 795 + 22;
+var FRAME_HEIGHT = 768;//795 + 22;
 const TOP_MENU_HEIGHT = 48;
-const MENU_LINK_ONLINE = 'https://www.bbi.net.br/json2.php';
+var MENU_LINK_ONLINE = 'https://www.bbi.net.br/json2.php';
 var MENU_SIZE = 335;
 var isOffline = true;
 var currentElement = null;
 var initialState = true;
+
+var mode = '';
+
+$(window).load(function () {
+    $('#theHeader').css('opacity', 0);
+    //  console.log(navigator.network.connection.type);
+    // mobile || web
+
+    mode = 'mobile';
+
+    switch (mode) {
+
+        case 'mobile':
+            FRAME_HEIGHT = 768;
+            MENU_LINK_ONLINE = 'https://www.bbi.net.br/json2.php';
+            app.initialize();
+            break;
+        case 'web':
+        default:
+            FRAME_HEIGHT = 795 + 20;
+            MENU_LINK_ONLINE = 'https://www.bbi.net.br/json3.php';
+            isOffline = false;
+            loadMenu()
+            break;
+    }
+
+
+});
 
 
 var app = {
@@ -116,7 +144,6 @@ var app = {
         document.addEventListener('pause', this.onDevicePause, false);
     },
     onDeviceReady: function () {
-
 
 
         if (navigator.network.connection.type == 'none') {
@@ -138,18 +165,6 @@ var app = {
     }
 };
 
-$(window).load(function () {
-    $('#theHeader').css('opacity', 0);
-    //console.log(navigator.network.connection.type);
-    // mobile || web
-    if (true) {
-        app.initialize();
-    } else {
-        isOffline = true;
-        loadMenu()
-    }
-
-});
 
 $(document).ready(function () {
 
@@ -190,7 +205,7 @@ function loadMenu() {
 }
 
 function showSideBar() {
-    setTitle('');
+    //setTitle('');
     $("#sideBar").show();
     $('#mainPageContent').animate({
         left: MENU_SIZE + 'px',
@@ -212,7 +227,7 @@ function showSideBar() {
 }
 
 function hideSideBar() {
-    setTitle('MDB Pro 2013');
+   // setTitle('MDB Pro 2013');
     $('#mainPageContent').animate({
         left: '0px',
         width: $(window).width() + 'px'
@@ -258,10 +273,13 @@ function generateApp(menuData) {
                 $('#subMenu' + key).append(
                     '<a href="javascript:void(0);" ' +
                         'id="menuItem' + key + i + '" ' +
-                        'class="theFontItem itemDash" ' +
+                        'class="theFontItem itemDash " ' +
                         'style="background-color: rgba(255, 255, 255, 0.4);" ' +
                         'data-ad="' + elm.ad + '" ' +
+                        'data-title="'  + elm.titulo + '" ' +
+                        'data-sectiontitle="'  + value.title + '" ' +
                         'data-element="' + baseURL + elm.link + '">' + elm.titulo + '</a>\n' +
+
                         '<em class="submenu-decoration"></em>\n');
 
 
@@ -283,10 +301,12 @@ function generateApp(menuData) {
 
     $(".itemDash").click(
         function () {
+
+            setTitle($(this).data('sectiontitle')); console.log($(this).data('sectiontitle'))
             $("#theEmptyContent").unbind("click").animate({ opacity: 0}, 500, 'linear');
             initialState = false;
             $('#theHeader').animate({opacity: 1});
-            // hideSideBar();
+            hideSideBar();
             $('.itemDash').css("background-color", 'rgba(255, 255, 255, 0.4)');
             $(this).css("background-color", 'rgba(255, 255, 255, 0.8)');
 
@@ -312,7 +332,7 @@ function generateApp(menuData) {
                                     '   height:' + FRAME_HEIGHT + 'px;' +
 
                                     ' "></div>');
-                            console.log('<div id="myFrame"' +
+                           /* console.log('<div id="myFrame"' +
                                 'style="  ' +
                                 '   text-align:center; ' +
                                 // '   background-position: 0 0; ' +
@@ -321,7 +341,7 @@ function generateApp(menuData) {
                                 '   width:' + FRAME_WIDTH + 'px;' +
                                 '   height:' + FRAME_HEIGHT + 'px;' +
 
-                                '></div>')
+                                '></div>')  */
                             $('#myFrame').bind('click', function () {
                                 $.fancybox(
                                     "<h2>Atenção!</h2>" +
@@ -334,6 +354,17 @@ function generateApp(menuData) {
                                     });
                             });
                         } else {
+                            caption = '';
+                            switch (mode) {
+
+                                case 'mobile':
+
+                                    break;
+                                case 'web':
+                                default:
+                                    caption = ' <div id="dashCaptions"></div>';
+                                    break;
+                            }
                             $('#theContentContainer').html(
 
                                 '<div id="myFrame" style=" -webkit-transition: all .1s linear ; width:' + FRAME_WIDTH + 'px;height: ' + FRAME_HEIGHT + 'px;" >' +
@@ -342,7 +373,7 @@ function generateApp(menuData) {
                                     '       frameborder="0"  scrolling="no" ' +
                                     '       width="' + FRAME_WIDTH + '" height="' + FRAME_HEIGHT + '" > ' +
                                     '   </iframe>' +
-                                    // ' <div id="dashCaptions"></div>' +
+                                    caption +
                                     '</div>'
 
 
@@ -382,9 +413,19 @@ function generateApp(menuData) {
 
     $('.deploy-submenu').click(function () {
         var topScroll = 0;
+        var toggletime=400;
+        var opacitytime=200;
         if (!$(this).parent().find('.submenu').is(":visible")) {
-            $('.submenu').hide('slow', 'easeInOutExpo');
-            $(this).parent().find('.submenu').toggle(500, 'easeInOutExpo');
+            //$('.itemDash').animate({ opacity: 0}, opacitytime, 'linear');
+           // $('.submenu-decoration').animate({ opacity: 0}, opacitytime>>1, 'linear');
+
+            $('.submenu').hide(toggletime>>1, 'linear');
+
+            $(this).parent().find('.submenu').toggle(toggletime, 'linear');
+            setTimeout(function(){
+             //   $('.itemDash').animate({ opacity: 1}, opacitytime, 'linear');
+               // $('.submenu-decoration').animate({ opacity:1}, opacitytime>>1, 'linear');
+            },700)
             /*   $('.itemDash').each(function () {
              if($(this).height()>35){
              $(this).css('line-height','15px !important');
@@ -394,14 +435,19 @@ function generateApp(menuData) {
 
 
         } else {
-            $(this).parent().find('.submenu').toggle(500, 'easeInOutExpo');
-
+           // $('.itemDash').animate({ opacity: 0}, opacitytime, 'linear');
+          //  $('.submenu-decoration').animate({ opacity: 0}, opacitytime>>1, 'linear');
+            $(this).parent().find('.submenu').toggle(toggletime, 'linear');
+            setTimeout(function(){
+            //    $('.itemDash').animate({ opacity: 1}, opacitytime, 'linear');
+             //   $('.submenu-decoration').animate({ opacity:1}, opacitytime>>1, 'linear');
+            },700)
 
         }
 
         $("#page-sidebar-scroll").animate({
             scrollTop: topScroll
-        });
+        },toggletime, 'linear');
 
 
         // setTimeout(function(){
@@ -557,8 +603,6 @@ function onResize() {
         //$('#leBody').css('width', $(window).width());
         // $('#leBody').css('-webkit-transform','scale('+scale+')');
     }
-
-
 
 
 }
