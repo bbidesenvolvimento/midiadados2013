@@ -56,9 +56,10 @@ class ItemController extends Controller
             //echo "\"".$categoria->getNome()."\":[{";
             array_push($arr, $categoria->getNome());
             foreach ($entities as $entitie) {
-                array_push($arr, array('titulo' => $entitie->getTitulo(),
+                array_push($arr, array(
+                'titulo' => $entitie->getTitulo(),
                 'link' => "http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink(),
-                'ad' => ''
+                'segmento' => $categoria->getSegmento()
                 ));
                 //echo "\"titulo:"."\"".$entitie->getTitulo()."\",";
                 //echo "\"link:"."\"http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink()."\",";
@@ -163,6 +164,7 @@ class ItemController extends Controller
             $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria($categoria->getId());
             echo "<h1>".$categoria->getId().'-'.$categoria->getNome()."</h1><br>";
             foreach ($entities as $entitie) {
+                echo "<b>titulo:</b>".$categoria->getSegmento()."<br>";
                 echo "<b>titulo:</b>".$entitie->getTitulo()."<br>";
                 echo "<b>link:"."</b>http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink()."<br>";
                 echo "<b>ad:"."</b>".'<br>';
