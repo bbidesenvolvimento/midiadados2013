@@ -72,7 +72,7 @@ iframe {
     background-repeat: repeat;
     margin-left: 0px !important;
     margin-right: 0px !important;
-    padding-top: 46px;
+   /* padding-top: 46px;*/
     width: 100%;
     height: 100%;
 
@@ -446,8 +446,11 @@ h5 {
     color: #757575;
     margin-top: 15px;
 }
+
+ /*
+
 .sidebar-button-close {
-    /* background-image: url(../images/icon_shadow/misc/accessdenied.png);  */
+    /* background-image: url(../images/icon_shadow/misc/accessdenied.png);  * /
     background-image: url(../images/misc/menu-item/deploy-menu.png);
     background-position: center center;
     background-size: contain;
@@ -463,7 +466,7 @@ h5 {
     width: 48px;
     height: 48px;
 
-    display: block;
+
     display: none;
     -webkit-transform: rotate(-180deg);
 
@@ -496,9 +499,10 @@ h5 {
 .header-tutorial {
     position: absolute;
     z-index: 12;
+
     /* background-image:url(../images/misc/menu-item/tutorial.png);
-     background-repeat:no-repeat;
-      */
+     background-repeat:no-repeat;  * /
+
 
     height: 48px;
     display: block;
@@ -511,3 +515,23 @@ h5 {
 }
 
 
+.topMenuItem {
+    position: absolute;
+    z-index: 12;
+    background-image: url(../images/misc/menu-item/deploy-menu.png);
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-position: center center;
+    background-size: contain;
+
+
+    display: inline-block;
+    -webkit-transform: rotate(-180deg);
+    font-family: MidiaFonte;
+
+}   */
+
+.midiaFont{
+    font-family: MidiaFonte !important;
+    font-size: 20px !important;
+}
