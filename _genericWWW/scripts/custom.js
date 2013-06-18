@@ -112,7 +112,7 @@ $(window).load(function () {
     //  console.log(navigator.network.connection.type);
     // mobile || web
 
-    mode = 'mobile';
+    mode = 'web';
 
     switch (mode) {
 
