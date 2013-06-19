@@ -19,7 +19,7 @@
     <ignored path="midiadados2013.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/custom.js" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371185163784" ignored="false" />
-    <file path="/index.html" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371056131052" ignored="false" />
+    <file path="/index.html" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371670975407" ignored="false" />
     <file path="/a.dummy" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1369284063055" ignored="false" />
     <file path="/style.css" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371050953440" ignored="false" />
     <file path="/videobg.js" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1368495440859" ignored="false" />
@@ -77,7 +77,7 @@
     <file path="$USER_HOME$/Desktop/bootstrap/css/bootstrap-responsive.css" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371048467309" ignored="false" />
     <file path="$USER_HOME$/Desktop/bootstrap/css/bootstrap.css" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371048467309" ignored="false" />
     <file path="$USER_HOME$/Desktop/bootstrap/js/bootstrap.js" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371048492141" ignored="false" />
-    <file path="/*.regexp" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371071821812" ignored="false" />
+    <file path="/*.regexp" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371670617233" ignored="false" />
     <file path="$PROJECT_DIR$/../../projetos_php/SOL01/protected/controllers/BadgesController.php" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371152108143" ignored="false" />
     <file path="/BadgesController.php" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371152108143" ignored="false" />
     <file path="/_header.php" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1371159204054" ignored="false" />
@@ -114,6 +114,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -150,7 +151,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -163,13 +163,22 @@
       <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_genericWWW/scripts/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="165" selection-start="3101" selection-end="3101" vertical-scroll-proportion="0.030195381">
+            <state line="60" column="146" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.056239016">
               <folding>
-                <marker date="1371186382421" expanded="false" signature="6372:6413" placeholder="..." />
-                <marker date="1371186382421" expanded="false" signature="6602:6623" placeholder="..." />
-                <marker date="1371186382421" expanded="false" signature="12851:12895" placeholder="..." />
-                <marker date="1371186382421" expanded="false" signature="19449:19476" placeholder="..." />
+                <marker date="1371671042733" expanded="false" signature="6417:6458" placeholder="..." />
+                <marker date="1371671042733" expanded="false" signature="6647:6668" placeholder="..." />
+                <marker date="1371671042733" expanded="false" signature="12896:12940" placeholder="..." />
+                <marker date="1371671042733" expanded="false" signature="19494:19521" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="framework.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_genericWWW/styles/framework.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="72" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,7 +186,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_genericWWW/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="89" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.0">
+            <state line="81" column="211" selection-start="4077" selection-end="4077" vertical-scroll-proportion="-13.8">
               <folding />
             </state>
           </provider>
@@ -186,7 +195,7 @@
       <file leaf-file-name="retina.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_genericWWW/styles/retina.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="114" selection-start="242" selection-end="341" vertical-scroll-proportion="0.0">
+            <state line="11" column="64" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -204,7 +213,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_genericWWW/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="482" column="5" selection-start="10739" selection-end="10739" vertical-scroll-proportion="0.0">
+            <state line="520" column="51" selection-start="11393" selection-end="11393" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -251,8 +260,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_genericWWW/styles/framework.css" />
-        <option value="$PROJECT_DIR$/_genericWWW/scripts/retina.js" />
         <option value="$PROJECT_DIR$/android/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/android/assets/www/js/index.js" />
         <option value="$PROJECT_DIR$/android/assets/www/styles/style.css" />
@@ -260,13 +267,15 @@
         <option value="$PROJECT_DIR$/android/assets/www/index.html" />
         <option value="$PROJECT_DIR$/android/assets/www/config.xml" />
         <option value="$PROJECT_DIR$/android/src/br/net/bbi/midiadadospro2013.java" />
-        <option value="$PROJECT_DIR$/android/assets/www/scripts/custom.js" />
         <option value="$PROJECT_DIR$/android/res/xml/config.xml" />
         <option value="$PROJECT_DIR$/_genericWWW/styles/framework-style.css" />
         <option value="$PROJECT_DIR$/_genericWWW/styles/style.css" />
-        <option value="$PROJECT_DIR$/_genericWWW/index.html" />
         <option value="$PROJECT_DIR$/android/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/_genericWWW/styles/retina.css" />
+        <option value="$PROJECT_DIR$/_genericWWW/styles/framework.css" />
+        <option value="$PROJECT_DIR$/_genericWWW/index.html" />
         <option value="$PROJECT_DIR$/_genericWWW/scripts/custom.js" />
+        <option value="$PROJECT_DIR$/android/assets/www/scripts/custom.js" />
       </list>
     </option>
   </component>
@@ -305,7 +314,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -436,6 +444,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -459,11 +468,11 @@
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="teste" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="cpro5481.publiccloud.com.br" serverId="509bd2c3-37a6-4b33-b349-b43e389bcb04">
     <servers>
@@ -474,9 +483,6 @@
             <mapping local="$PROJECT_DIR$/android" />
           </mappings>
         </serverdata>
-      </server>
-      <server id="4f7ecfb8-29c3-449d-9780-2b2d85e496ec">
-        <serverdata />
       </server>
       <server id="509bd2c3-37a6-4b33-b349-b43e389bcb04">
         <serverdata>
@@ -501,9 +507,6 @@
             <mapping local="$PROJECT_DIR$/android" />
           </mappings>
         </serverdata>
-      </server>
-      <server id="77d572a6-5fb4-4b22-842b-4466b4a85c4a">
-        <serverdata />
       </server>
       <server id="b6979e42-79b3-4f80-9c0f-38c6133406d9">
         <serverdata>
@@ -582,10 +585,6 @@
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -604,25 +603,16 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -653,6 +643,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -675,9 +678,6 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="509bd2c3-37a6-4b33-b349-b43e389bcb04" server_name="cpro5481.publiccloud.com.br">
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -697,6 +697,9 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="509bd2c3-37a6-4b33-b349-b43e389bcb04" server_name="cpro5481.publiccloud.com.br">
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -772,43 +775,43 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33846155" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32819384" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14354323" sideWeight="0.6615385" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14354323" sideWeight="0.67180616" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3156733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32819384" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Colour Chooser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6002278" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11978022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6002278" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33940774" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Colour Chooser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -881,13 +884,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/android/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="16" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android/res/xml/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="46" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
@@ -908,11 +904,6 @@
     <entry file="file://$PROJECT_DIR$/android/src/br/net/bbi/midiadadospro2013.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="47" selection-start="229" selection-end="237" vertical-scroll-proportion="0.11564626" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/assets/www/scripts/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="32" selection-start="3357" selection-end="3357" vertical-scroll-proportion="0.019517796" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -942,27 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_genericWWW/styles/retina.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="114" selection-start="242" selection-end="341" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_genericWWW/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="482" column="5" selection-start="10739" selection-end="10739" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_genericWWW/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="89" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android/res/xml/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="77" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
@@ -970,22 +940,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_genericWWW/scripts/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="165" selection-start="3101" selection-end="3101" vertical-scroll-proportion="0.030195381">
-          <folding>
-            <marker date="1371186382421" expanded="false" signature="6372:6413" placeholder="..." />
-            <marker date="1371186382421" expanded="false" signature="6602:6623" placeholder="..." />
-            <marker date="1371186382421" expanded="false" signature="12851:12895" placeholder="..." />
-            <marker date="1371186382421" expanded="false" signature="19449:19476" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="63" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_genericWWW/styles/framework.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="72" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_genericWWW/styles/retina.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="64" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_genericWWW/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="520" column="51" selection-start="11393" selection-end="11393" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_genericWWW/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="211" selection-start="4077" selection-end="4077" vertical-scroll-proportion="-13.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/assets/www/scripts/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="18" selection-start="2850" selection-end="2850" vertical-scroll-proportion="0.56239015">
+          <folding>
+            <marker date="1371671155692" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1371671155692" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1371671155692" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1371671155692" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_genericWWW/scripts/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="146" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.056239016">
+          <folding>
+            <marker date="1371671042733" expanded="false" signature="6417:6458" placeholder="..." />
+            <marker date="1371671042733" expanded="false" signature="6647:6668" placeholder="..." />
+            <marker date="1371671042733" expanded="false" signature="12896:12940" placeholder="..." />
+            <marker date="1371671042733" expanded="false" signature="19494:19521" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

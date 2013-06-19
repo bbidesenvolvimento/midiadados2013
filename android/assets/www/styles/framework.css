@@ -233,7 +233,7 @@ ol > li:last-child, ul > li:last-child {
     position:absolute;
     left:50%;
     top:50%;
-    background-image:url(../images/status.gif);
+    /*background-image:url(../images/status.gif);*/
     background-size:32px 32px;
     background-repeat:no-repeat;
     background-position:center;
@@ -263,7 +263,7 @@ ol > li:last-child, ul > li:last-child {
 .heading-background{
     text-transform:uppercase;
     border:solid 1px #cacaca;
-    background-image:url(../images/icon_shadow/arrows/bendedright.png);
+   /* background-image:url(../images/icon_shadow/arrows/bendedright.png); */
     background-repeat:no-repeat;
     background-size:18px 19px;
     background-position:10px center;
@@ -1534,13 +1534,13 @@ table tr:hover td{
 #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
 #cboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc;}
 #cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
-#cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(../images/colorbox/controls.png) no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
+#cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px;/* background:url(../images/colorbox/controls.png) no-repeat top left;*/ width:28px; height:65px; text-indent:-9999px;}
 #cboxPrevious:hover{background-position:bottom left;}
-#cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(../images/colorbox/controls.png) no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
+#cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; /*background:url(../images/colorbox/controls.png) no-repeat top right;*/ width:28px; height:65px; text-indent:-9999px;}
 #cboxNext:hover{background-position:bottom right;}
 #cboxLoadingOverlay{background:#000;}
-#cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
-#cboxClose{position:absolute; top:5px; right:5px; display:block; background:url(../images/colorbox/controls.png) no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
+#cboxLoadingGraphic{/*background:url(images/loading.gif) no-repeat center center;*/}
+#cboxClose{position:absolute; top:5px; right:5px; display:block;/* background:url(../images/colorbox/controls.png) no-repeat top center;*/ width:38px; height:19px; text-indent:-9999px;}
 #cboxClose:hover{background-position:bottom center;}
 
 
@@ -1574,8 +1574,8 @@ div.ps-uilayer { 				background: #000;	cursor: pointer;}
 
 div.ps-zoom-pan-rotate{			background: #000;}
 div.ps-zoom-pan-rotate *  { 	display: block; }
-div.ps-carousel-item-loading { 	background: url(../images/gallery/loader.gif) no-repeat center center; }
-div.ps-carousel-item-error { 	background: url(../images/gallery/error.gif) no-repeat center center; }
+div.ps-carousel-item-loading { /*	background: url(../images/gallery/loader.gif) no-repeat center center; */}
+div.ps-carousel-item-error { /*	background: url(../images/gallery/error.gif) no-repeat center center; */}
 
 div.ps-caption{
     background: #000000;
@@ -1630,7 +1630,7 @@ div.ps-toolbar div div.ps-toolbar-content{
     width: 44px;
     height: 44px;
     margin: 0 auto 0;
-    background-image: url(../images/gallery/icons.png);
+    /*background-image: url(../images/gallery/icons.png);  */
     background-repeat: no-repeat;
 }
 
@@ -1669,7 +1669,7 @@ only screen and (min-resolution: 240dpi)
         -o-background-size: 176px 88px;
         -webkit-background-size: 176px 88px;
         background-size: 176px 88px;
-        background-image: url(../images/gallery/icons@2x.png);
+      /*  background-image: url(../images/gallery/icons@2x.png);     */
     }
 }
 
@@ -1891,7 +1891,7 @@ only screen and (min-resolution: 240dpi)
     display:block;
     width:100%;
     height:inherit;
-    line-height:inherit;f
+    line-height:inherit;
     padding-top:3px;
     font-size:12px;
     padding-left:0px;
@@ -1915,7 +1915,7 @@ only screen and (min-resolution: 240dpi)
 }
 
 .sliding-door-bottom a em{
-    background-image:url(../images/ui/minus.png);
+  /*  background-image:url(../images/ui/minus.png);   */
     background-repeat:no-repeat;
     background-position:13px 13px;
     margin-right:20px;
@@ -1927,7 +1927,7 @@ only screen and (min-resolution: 240dpi)
 
 
 .sliding-door-top a em{
-    background-image:url(../images/ui/plus.png);
+  /*  background-image:url(../images/ui/plus.png);  */
     background-repeat:no-repeat;
     background-position:13px 13px;
     margin-right:20px;
@@ -1957,7 +1957,7 @@ only screen and (min-resolution: 240dpi)
 .dropdown-deploy em{
     width:40px;
     height:40px;
-    background-image:url(../images/ui/arrow-down.png);
+   /* background-image:url(../images/ui/arrow-down.png);  */
     background-repeat:no-repeat;
     background-position:11px 15px;
 }
@@ -1981,7 +1981,7 @@ only screen and (min-resolution: 240dpi)
 .dropdown-hidden em{
     width:40px;
     height:40px;
-    background-image:url(../images/ui/arrow-up.png);
+   /* background-image:url(../images/ui/arrow-up.png);  */
     background-repeat:no-repeat;
     background-position:11px 15px;
 }

@@ -99,7 +99,7 @@ var dashes =
 const FRAME_WIDTH = 1024;
 var FRAME_HEIGHT = 768;//795 + 22;
 const TOP_MENU_HEIGHT = 48;
-var MENU_LINK_ONLINE = 'https://mdb.bbi.net.br/json2.php';
+var MENU_LINK_ONLINE = 'http://mdb2013.bbi.net.br/scripts_mdb/json2.php';
 var MENU_SIZE = 335;
 var isOffline = true;
 var currentElement = null;
@@ -118,13 +118,13 @@ $(window).load(function () {
 
         case 'mobile':
             FRAME_HEIGHT = 768;
-            MENU_LINK_ONLINE = 'https://mdb.bbi.net.br/json2.php';
+            MENU_LINK_ONLINE = 'http://mdb2013.bbi.net.br/scripts_mdb/json2.php';
             app.initialize();
             break;
         case 'web':
         default:
             FRAME_HEIGHT = 795 + 20;
-            MENU_LINK_ONLINE = 'https://mdb.bbi.net.br/json3.php';
+            MENU_LINK_ONLINE = 'http://mdb2013.bbi.net.br/scripts_mdb/json3.php';
             isOffline = false;
             loadMenu();
             break;
