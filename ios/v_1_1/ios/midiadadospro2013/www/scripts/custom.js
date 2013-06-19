@@ -529,7 +529,8 @@ function generateApp(menuData) {
         });
 
         $("#initMovie").click(function(){
-            window.open("http://www.google.com.br/ads")
+            window.open('http://www.google.com.br/ads', '_system');
+          //  window.open("http://www.google.com.br/ads")
         });
 
         $("#initMovie").fadeIn('slow', function () {    //slow

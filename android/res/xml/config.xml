@@ -29,6 +29,8 @@
     <!-- <access origin="https://example.com" subdomains="true" /> such as above, but including subdomains, such as www -->
     <access origin=".*"/>
 
+    <access origin="*" browserOnly="true" />
+
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
     <content src="index.html" />
 
@@ -41,9 +43,12 @@
 
 
 
+
+
     <plugins>
     <plugin name="App" value="org.apache.cordova.App"/>
     <plugin name="Device" value="org.apache.cordova.Device"/>
+   <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
 
 </plugins>
 </cordova>
