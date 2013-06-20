@@ -85,6 +85,7 @@ switch ($cat) {
   <div id="conteudo">
    	 <iframe align="middle" src="<?php echo get_trusted_url($user,$server,'views/'.$sub); ?>" width="1024" height="815" frameborder="0">
    	 </div>
+   	 <img src="legendas.png">
    	 </center>
 </iframe>
   </div>
