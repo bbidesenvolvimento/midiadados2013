@@ -27,7 +27,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/')) {
             // _assetic_jquery_js
-            if ($pathinfo === '/js/06837fc_part_1.js') {
+            if ($pathinfo === '/assetic/jquery_js.js') {
                 return array (  '_controller' => 'assetic.controller:render',  'name' => 'jquery_js',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_jquery_js',);
             }
 
@@ -37,7 +37,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // _assetic_bootstrap_js
-            if ($pathinfo === '/js/06837fc_part_2.js') {
+            if ($pathinfo === '/assetic/bootstrap_js.js') {
                 return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_bootstrap_js',);
             }
 
@@ -107,8 +107,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // _assetic_bootstrap_less
-            if ($pathinfo === '/css/425e28c_part_1.css') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_less',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_bootstrap_less',);
+            if ($pathinfo === '/assetic/bootstrap_less.less') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_less',  'pos' => NULL,  '_format' => 'less',  '_route' => '_assetic_bootstrap_less',);
             }
 
             // _assetic_bootstrap_less_0
