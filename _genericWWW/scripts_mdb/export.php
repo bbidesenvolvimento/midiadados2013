@@ -26,8 +26,8 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
 
 ?>
 <style type="text/css">
-#dashCaptions {
-    background: url(../images/midiaDados/legendas.png);
+#legenda {
+    background: url("legendas.png");
     background-repeat: no-repeat;
     background-color: #ffffff;
     background-position: center center;
@@ -44,8 +44,8 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
 
 <center>
   <div id="conteudo">
-   	 <iframe align="middle" src="<?php echo get_trusted_url($user,$server,'views/'.$sub); ?>" width="1024" height="815" frameborder="0"/>
-   	 <div id="#dashCaptions"></div>
+   	 <iframe align="middle" src="<?php //echo get_trusted_url($user,$server,'views/'.$sub); ?>" width="1024" height="815" frameborder="0"/></iframe>
+   	 <div id="#legenda"><img src="legendas.png"></img></div>
    	 </div>
    	 </center>
 </iframe>
