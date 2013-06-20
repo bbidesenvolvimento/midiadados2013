@@ -35,7 +35,7 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
 var_dump($cat);
 var_dump($sub);
 echo "</pre>";*/
- 
+ /*
 switch ($cat) {
 	case 'mercadoDemografia':
 		header("Location:". get_trusted_url($user,$server,'views/'.$sub));
@@ -79,4 +79,11 @@ switch ($cat) {
  	default:
 		# code...
 		break;
-}
+}*/
+?>
+
+  <div id="conteudo">
+   	 <iframe align="middle" src="<?php echo get_trusted_url($user,$server,'views/'.$sub); ?>">
+   	 </div>
+</iframe>
+  </div>
