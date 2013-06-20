@@ -14,7 +14,7 @@ $server = "srv.bbi.net.br";
 $user = "midiadados";
 
 function get_trusted_url($user,$server,$view_url) {
-	$params = ':embed=yes&:toolbar=no';
+	$params = ':embed=yes&:toolbar=yes';
 	$ticket = get_trusted_ticket($server, $user, $_SERVER['REMOTE_ADDR']);
 	if($ticket > 0) {
 		return "https://$server/trusted/$ticket/$view_url?$params";
