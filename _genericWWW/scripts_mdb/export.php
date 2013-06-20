@@ -1,10 +1,10 @@
 <?php
 
-// $cat = $_GET['cat'];
-// $sub = $_GET['sub'];
+$cat = $_GET['cat'];
+$sub = $_GET['sub'];
 
-$cat='mercadoDemografia';
-$sub='AFORMAOUNIVERSITRIADEPUBLICIDADENOBRASIL/AFORMAOUNIVERSITRIADEPUBLICIDADENOBRASIL';
+// $cat='mercadoDemografia';
+// $sub='AFORMAOUNIVERSITRIADEPUBLICIDADENOBRASIL/AFORMAOUNIVERSITRIADEPUBLICIDADENOBRASIL';
 
 
 //https://srv.bbi.net.br/views/TVPORASSINATURA/PERFILPENETRAOEEVOLUODAPENETRAODOMEIO?:embed=yes&:toolbar=yes
