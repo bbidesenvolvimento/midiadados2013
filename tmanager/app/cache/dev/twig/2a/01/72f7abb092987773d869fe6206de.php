@@ -331,7 +331,7 @@ class __TwigTemplate_2a0172f7abb092987773d869fe6206de extends Twig_Template
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['i'], $context['query'], $context['_parent'], $context['loop']);
-                $context = array_merge($_parent, array_intersect_key($context, $_parent));
+                $context = array_intersect_key($context, $_parent) + $_parent;
                 // line 103
                 echo "            </ul>
         ";
@@ -349,7 +349,7 @@ class __TwigTemplate_2a0172f7abb092987773d869fe6206de extends Twig_Template
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['connection'], $context['queries'], $context['_parent'], $context['loop']);
-        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 106
         echo "
     <h2>Database Connections</h2>
@@ -447,7 +447,7 @@ class __TwigTemplate_2a0172f7abb092987773d869fe6206de extends Twig_Template
                         }
                         $_parent = $context['_parent'];
                         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['error'], $context['_parent'], $context['loop']);
-                        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+                        $context = array_intersect_key($context, $_parent) + $_parent;
                         // line 151
                         echo "                                </ul>
                             ";
@@ -463,7 +463,7 @@ class __TwigTemplate_2a0172f7abb092987773d869fe6206de extends Twig_Template
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['class'], $context['_parent'], $context['loop']);
-                $context = array_merge($_parent, array_intersect_key($context, $_parent));
+                $context = array_intersect_key($context, $_parent) + $_parent;
                 // line 158
                 echo "                </tbody>
             </table>
@@ -474,7 +474,7 @@ class __TwigTemplate_2a0172f7abb092987773d869fe6206de extends Twig_Template
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['manager'], $context['classes'], $context['_parent'], $context['loop']);
-        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 162
         echo "
     <script type=\"text/javascript\">//<![CDATA[

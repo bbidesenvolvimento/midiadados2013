@@ -26,6 +26,109 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $pathinfo = rawurldecode($pathinfo);
 
         if (0 === strpos($pathinfo, '/')) {
+            // _assetic_jquery_js
+            if ($pathinfo === '/js/06837fc_part_1.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'jquery_js',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_jquery_js',);
+            }
+
+            // _assetic_jquery_js_0
+            if ($pathinfo === '/assetic/jquery_js_jquery_1.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'jquery_js',  'pos' => '0',  '_format' => 'js',  '_route' => '_assetic_jquery_js_0',);
+            }
+
+            // _assetic_bootstrap_js
+            if ($pathinfo === '/js/06837fc_part_2.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_bootstrap_js',);
+            }
+
+            // _assetic_bootstrap_js_0
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-transition_1.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '0',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_0',);
+            }
+
+            // _assetic_bootstrap_js_1
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-alert_2.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '1',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_1',);
+            }
+
+            // _assetic_bootstrap_js_2
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-modal_3.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '2',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_2',);
+            }
+
+            // _assetic_bootstrap_js_3
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-dropdown_4.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '3',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_3',);
+            }
+
+            // _assetic_bootstrap_js_4
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-scrollspy_5.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '4',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_4',);
+            }
+
+            // _assetic_bootstrap_js_5
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-tab_6.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '5',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_5',);
+            }
+
+            // _assetic_bootstrap_js_6
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-tooltip_7.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '6',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_6',);
+            }
+
+            // _assetic_bootstrap_js_7
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-popover_8.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '7',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_7',);
+            }
+
+            // _assetic_bootstrap_js_8
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-button_9.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '8',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_8',);
+            }
+
+            // _assetic_bootstrap_js_9
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-collapse_10.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '9',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_9',);
+            }
+
+            // _assetic_bootstrap_js_10
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-carousel_11.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '10',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_10',);
+            }
+
+            // _assetic_bootstrap_js_11
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-typeahead_12.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '11',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_11',);
+            }
+
+            // _assetic_bootstrap_js_12
+            if ($pathinfo === '/assetic/bootstrap_js_bootstrap-affix_13.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_js',  'pos' => '12',  '_format' => 'js',  '_route' => '_assetic_bootstrap_js_12',);
+            }
+
+            // _assetic_bootstrap_less
+            if ($pathinfo === '/css/425e28c_part_1.css') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_less',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_bootstrap_less',);
+            }
+
+            // _assetic_bootstrap_less_0
+            if ($pathinfo === '/assetic/bootstrap_less_bootstrap_1.less') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bootstrap_less',  'pos' => '0',  '_format' => 'less',  '_route' => '_assetic_bootstrap_less_0',);
+            }
+
+            // _assetic_06837fc
+            if ($pathinfo === '/js/06837fc.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '06837fc',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_06837fc',);
+            }
+
+            // _assetic_425e28c
+            if ($pathinfo === '/css/425e28c.css') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '425e28c',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_425e28c',);
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/')) {
             // _welcome
             if (rtrim($pathinfo, '/') === '') {
                 if (substr($pathinfo, -1) !== '/') {

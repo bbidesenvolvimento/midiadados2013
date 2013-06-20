@@ -90,7 +90,7 @@ class __TwigTemplate_6e9506d358c3e551b2cbc49af2749941 extends Twig_Template
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['i'], $context['previous'], $context['_parent'], $context['loop']);
-            $context = array_merge($_parent, array_intersect_key($context, $_parent));
+            $context = array_intersect_key($context, $_parent) + $_parent;
             // line 31
             echo "                        </ul>
                     </div>
@@ -122,7 +122,7 @@ class __TwigTemplate_6e9506d358c3e551b2cbc49af2749941 extends Twig_Template
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['position'], $context['e'], $context['_parent'], $context['loop']);
-        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 46
         echo "
     ";

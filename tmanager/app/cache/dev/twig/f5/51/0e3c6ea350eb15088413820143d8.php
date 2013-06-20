@@ -24,7 +24,7 @@ class __TwigTemplate_f5510e3c6ea350eb15088413820143d8 extends Twig_Template
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 3
-        $context["__internal_b2dc29f6ff9003e90a9b656ad699522629f47ee8"] = $this;
+        $context["__internal_fe3477a739699b9065f01ecfb57e76dbbbfb499b"] = $this;
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -92,14 +92,14 @@ class __TwigTemplate_f5510e3c6ea350eb15088413820143d8 extends Twig_Template
             echo "</code></td>
                 <td><code>";
             // line 36
-            echo $context["__internal_b2dc29f6ff9003e90a9b656ad699522629f47ee8"]->getdisplay_listener($this->getContext($context, "listener"));
+            echo $context["__internal_fe3477a739699b9065f01ecfb57e76dbbbfb499b"]->getdisplay_listener($this->getContext($context, "listener"));
             echo "</code></td>
             </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['listener'], $context['_parent'], $context['loop']);
-        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 39
         echo "    </table>
 
@@ -135,14 +135,14 @@ class __TwigTemplate_f5510e3c6ea350eb15088413820143d8 extends Twig_Template
                 echo "</code></td>
                     <td><code>";
                 // line 55
-                echo $context["__internal_b2dc29f6ff9003e90a9b656ad699522629f47ee8"]->getdisplay_listener($this->getAttribute($this->getContext($context, "listeners"), $this->getContext($context, "listener"), array(), "array"));
+                echo $context["__internal_fe3477a739699b9065f01ecfb57e76dbbbfb499b"]->getdisplay_listener($this->getAttribute($this->getContext($context, "listeners"), $this->getContext($context, "listener"), array(), "array"));
                 echo "</code></td>
                 </tr>
             ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['listener'], $context['_parent'], $context['loop']);
-            $context = array_merge($_parent, array_intersect_key($context, $_parent));
+            $context = array_intersect_key($context, $_parent) + $_parent;
             // line 58
             echo "        </table>
     ";

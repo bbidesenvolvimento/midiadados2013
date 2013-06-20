@@ -65,5 +65,7 @@
   64 => 'Monolog\\Logger',
   65 => 'Symfony\\Bridge\\Monolog\\Logger',
   66 => 'Symfony\\Bridge\\Monolog\\Handler\\DebugHandler',
-  67 => 'JMS\\DiExtraBundle\\HttpKernel\\ControllerResolver',
+  67 => 'Symfony\\Bundle\\AsseticBundle\\DefaultValueSupplier',
+  68 => 'Symfony\\Bundle\\AsseticBundle\\Factory\\AssetFactory',
+  69 => 'JMS\\DiExtraBundle\\HttpKernel\\ControllerResolver',
 );

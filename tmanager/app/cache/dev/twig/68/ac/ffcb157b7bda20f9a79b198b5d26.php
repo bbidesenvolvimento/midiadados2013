@@ -130,7 +130,7 @@ class __TwigTemplate_68acffcb157b7bda20f9a79b198b5d26 extends Twig_Template
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['header'], $context['_parent'], $context['loop']);
-                $context = array_merge($_parent, array_intersect_key($context, $_parent));
+                $context = array_intersect_key($context, $_parent) + $_parent;
                 // line 47
                 echo "
             <p>
@@ -150,7 +150,7 @@ class __TwigTemplate_68acffcb157b7bda20f9a79b198b5d26 extends Twig_Template
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['i'], $context['message'], $context['_parent'], $context['loop']);
-            $context = array_merge($_parent, array_intersect_key($context, $_parent));
+            $context = array_intersect_key($context, $_parent) + $_parent;
             // line 58
             echo "    ";
         }

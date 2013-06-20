@@ -71,9 +71,13 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAssetic_AssetManagerService()
     {
-        $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('/var/www/midiadados2013/tmanager/app/cache/dev/assetic/config'), true)));
+        $a = $this->get('templating.loader');
 
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($this->get('templating.loader'), '', '/var/www/midiadados2013/tmanager/app/Resources/views', '/\\.[^.]+\\.twig$/'), 'twig');
+        $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('config' => new \Symfony\Bundle\AsseticBundle\Factory\Loader\ConfigurationLoader(), 'twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('/var/www/midiadados2013/tmanager/app/cache/dev/assetic/config'), true)));
+
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\ConfigurationResource(array('jquery_js' => array(0 => array(0 => '/var/www/midiadados2013/tmanager/app/app/Resources/public/js/vendor/jquery.js'), 1 => array(0 => '?yui_js'), 2 => array()), 'bootstrap_js' => array(0 => array(0 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-transition.js', 1 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-alert.js', 2 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-modal.js', 3 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-dropdown.js', 4 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-scrollspy.js', 5 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-tab.js', 6 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-tooltip.js', 7 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-popover.js', 8 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-button.js', 9 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-collapse.js', 10 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-carousel.js', 11 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-typeahead.js', 12 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-affix.js'), 1 => array(0 => '?yui_js'), 2 => array()), 'bootstrap_less' => array(0 => array(0 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/less/bootstrap.less'), 1 => array(0 => 'lessphp', 1 => 'cssembed'), 2 => array()))), 'config');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BbiTmanagerBundle', '/var/www/midiadados2013/tmanager/app/Resources/BbiTmanagerBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BbiTmanagerBundle', '/var/www/midiadados2013/tmanager/src/Bbi/TmanagerBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, '', '/var/www/midiadados2013/tmanager/app/Resources/views', '/\\.[^.]+\\.twig$/'), 'twig');
 
         return $instance;
     }
@@ -93,6 +97,30 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the 'assetic.filter.cssembed' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Assetic\Filter\CssEmbedFilter A Assetic\Filter\CssEmbedFilter instance.
+     */
+    protected function getAssetic_Filter_CssembedService()
+    {
+        $this->services['assetic.filter.cssembed'] = $instance = new \Assetic\Filter\CssEmbedFilter('/var/www/midiadados2013/tmanager/app/Resources/java/cssembed-0.4.5.jar', '/usr/bin/java');
+
+        $instance->setTimeout(NULL);
+        $instance->setCharset('UTF-8');
+        $instance->setMhtml(false);
+        $instance->setMhtmlRoot(NULL);
+        $instance->setRoot(NULL);
+        $instance->setSkipMissing(false);
+        $instance->setMaxUriLength(NULL);
+        $instance->setMaxImageSize(NULL);
+
+        return $instance;
+    }
+
+    /**
      * Gets the 'assetic.filter.cssrewrite' service.
      *
      * This service is shared.
@@ -106,6 +134,50 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the 'assetic.filter.lessphp' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Assetic\Filter\LessphpFilter A Assetic\Filter\LessphpFilter instance.
+     */
+    protected function getAssetic_Filter_LessphpService()
+    {
+        require_once '/var/www/midiadados2013/tmanager/app/../vendor/leafo/lessphp/lessc.inc.php';
+
+        $this->services['assetic.filter.lessphp'] = $instance = new \Assetic\Filter\LessphpFilter();
+
+        $instance->setPresets(array());
+        $instance->setLoadPaths(array());
+        $instance->setFormatter(NULL);
+        $instance->setPreserveComments(NULL);
+
+        return $instance;
+    }
+
+    /**
+     * Gets the 'assetic.filter.yui_js' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Assetic\Filter\Yui\JsCompressorFilter A Assetic\Filter\Yui\JsCompressorFilter instance.
+     */
+    protected function getAssetic_Filter_YuiJsService()
+    {
+        $this->services['assetic.filter.yui_js'] = $instance = new \Assetic\Filter\Yui\JsCompressorFilter('/var/www/midiadados2013/tmanager/app/Resources/java/yuicompressor.jar', '/usr/bin/java');
+
+        $instance->setCharset('UTF-8');
+        $instance->setTimeout(NULL);
+        $instance->setStackSize(NULL);
+        $instance->setNomunge(NULL);
+        $instance->setPreserveSemi(NULL);
+        $instance->setDisableOptimizations(NULL);
+
+        return $instance;
+    }
+
+    /**
      * Gets the 'assetic.filter_manager' service.
      *
      * This service is shared.
@@ -115,7 +187,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAssetic_FilterManagerService()
     {
-        return $this->services['assetic.filter_manager'] = new \Symfony\Bundle\AsseticBundle\FilterManager($this, array('cssrewrite' => 'assetic.filter.cssrewrite'));
+        return $this->services['assetic.filter_manager'] = new \Symfony\Bundle\AsseticBundle\FilterManager($this, array('cssembed' => 'assetic.filter.cssembed', 'yui_js' => 'assetic.filter.yui_js', 'lessphp' => 'assetic.filter.lessphp', 'cssrewrite' => 'assetic.filter.cssrewrite'));
     }
 
     /**
@@ -266,11 +338,11 @@ class appDevDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return EntityManager5193a03a71ad8_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager5193a03a71ad8_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
+     * @return EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_5193a03a71ad8.php';
+        require_once '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_51c3214c23dfd.php';
 
         $a = new \Doctrine\Common\Cache\ArrayCache();
         $a->setNamespace('sf2orm_default_fdf53308ecc5a27015de41549231db03');
@@ -300,7 +372,7 @@ class appDevDebugProjectContainer extends Container
         $f = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $e);
         $this->get('doctrine.orm.default_manager_configurator')->configure($f);
 
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager5193a03a71ad8_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($f, $this);
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($f, $this);
     }
 
     /**
@@ -2470,7 +2542,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\YamlExtension());
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\FormExtension(new \Symfony\Bridge\Twig\Form\TwigRenderer(new \Symfony\Bridge\Twig\Form\TwigRendererEngine(array(0 => 'form_div_layout.html.twig')), $this->get('form.csrf_provider'))));
         $instance->addExtension(new \Twig_Extension_Debug());
-        $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), $this->get('templating.name_parser'), true, array(), array(), $this->get('assetic.value_supplier.default')));
+        $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), $this->get('templating.name_parser'), true, array(), array(0 => 'BbiTmanagerBundle'), $this->get('assetic.value_supplier.default')));
         $instance->addExtension(new \Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension());
         $instance->addExtension(new \JMS\SecurityExtraBundle\Twig\SecurityExtension($a));
         $instance->addExtension($this->get('twig.extension.acme.demo'));
@@ -2581,7 +2653,7 @@ class appDevDebugProjectContainer extends Container
     /**
      * Gets the doctrine.orm.entity_manager service alias.
      *
-     * @return EntityManager5193a03a71ad8_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
+     * @return EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
      */
     protected function getDoctrine_Orm_EntityManagerService()
     {
@@ -2614,6 +2686,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['assetic.asset_factory'] = $instance = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, $this->getParameterBag(), '/var/www/midiadados2013/tmanager/app/../web', true);
 
+        $instance->addWorker(new \Assetic\Factory\Worker\EnsureFilterWorker('/\\.less$/', $this->get('assetic.filter.lessphp')));
         $instance->addWorker(new \Symfony\Bundle\AsseticBundle\Factory\Worker\UseControllerWorker());
 
         return $instance;
@@ -3293,7 +3366,7 @@ class appDevDebugProjectContainer extends Container
             ),
             'assetic.cache_dir' => '/var/www/midiadados2013/tmanager/app/cache/dev/assetic',
             'assetic.bundles' => array(
-
+                0 => 'BbiTmanagerBundle',
             ),
             'assetic.twig_extension.class' => 'Symfony\\Bundle\\AsseticBundle\\Twig\\AsseticExtension',
             'assetic.twig_formula_loader.class' => 'Assetic\\Extension\\Twig\\TwigFormulaLoader',
@@ -3312,6 +3385,35 @@ class appDevDebugProjectContainer extends Container
             'assetic.node.bin' => '/usr/bin/node',
             'assetic.ruby.bin' => '/usr/bin/ruby',
             'assetic.sass.bin' => '/usr/bin/sass',
+            'assetic.filter.cssembed.class' => 'Assetic\\Filter\\CssEmbedFilter',
+            'assetic.filter.cssembed.java' => '/usr/bin/java',
+            'assetic.filter.cssembed.jar' => '/var/www/midiadados2013/tmanager/app/Resources/java/cssembed-0.4.5.jar',
+            'assetic.filter.cssembed.timeout' => NULL,
+            'assetic.filter.cssembed.charset' => 'UTF-8',
+            'assetic.filter.cssembed.mhtml' => false,
+            'assetic.filter.cssembed.mhtml_root' => NULL,
+            'assetic.filter.cssembed.root' => NULL,
+            'assetic.filter.cssembed.skip_missing' => false,
+            'assetic.filter.cssembed.max_uri_length' => NULL,
+            'assetic.filter.cssembed.max_image_size' => NULL,
+            'assetic.filter.yui_js.class' => 'Assetic\\Filter\\Yui\\JsCompressorFilter',
+            'assetic.filter.yui_js.java' => '/usr/bin/java',
+            'assetic.filter.yui_js.jar' => '/var/www/midiadados2013/tmanager/app/Resources/java/yuicompressor.jar',
+            'assetic.filter.yui_js.charset' => 'UTF-8',
+            'assetic.filter.yui_js.stacksize' => NULL,
+            'assetic.filter.yui_js.timeout' => NULL,
+            'assetic.filter.yui_js.nomunge' => NULL,
+            'assetic.filter.yui_js.preserve_semi' => NULL,
+            'assetic.filter.yui_js.disable_optimizations' => NULL,
+            'assetic.filter.lessphp.class' => 'Assetic\\Filter\\LessphpFilter',
+            'assetic.filter.lessphp.presets' => array(
+
+            ),
+            'assetic.filter.lessphp.paths' => array(
+
+            ),
+            'assetic.filter.lessphp.formatter' => NULL,
+            'assetic.filter.lessphp.preserve_comments' => NULL,
             'assetic.filter.cssrewrite.class' => 'Assetic\\Filter\\CssRewriteFilter',
             'assetic.twig_extension.functions' => array(
 
@@ -3408,8 +3510,8 @@ class appDevDebugProjectContainer extends Container
             ),
             'jms_di_extra.cache_dir' => '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra',
             'jms_di_extra.doctrine_integration' => true,
-            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_5193a03a71ad8.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager5193a03a71ad8_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_51c3214c23dfd.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'security.secured_services' => array(
 
             ),
