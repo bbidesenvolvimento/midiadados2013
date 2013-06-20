@@ -81,9 +81,10 @@ switch ($cat) {
 		break;
 }*/
 ?>
-
+<center>
   <div id="conteudo">
-   	 <iframe align="middle" src="<?php echo get_trusted_url($user,$server,'views/'.$sub); ?>">
+   	 <iframe align="middle" src="<?php echo get_trusted_url($user,$server,'views/'.$sub); ?>" width="100%" heigth="100%" frameborder="0">
    	 </div>
+   	 </center>
 </iframe>
   </div>
