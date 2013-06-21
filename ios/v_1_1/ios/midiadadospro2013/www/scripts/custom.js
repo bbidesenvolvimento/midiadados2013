@@ -124,7 +124,7 @@ $(window).load(function () {
         case 'mobileFake':
             FRAME_HEIGHT = 795 + 20;// 768;
             MENU_LINK_ONLINE = 'http://mdb2013.bbi.net.br/scripts_mdb/json2.php';
-            isOffline = true;
+            isOffline = false;
             loadMenu();
             break;
         case 'web':
@@ -393,10 +393,10 @@ function generateApp(menuData) {
                             switch (mode) {
 
                                 case 'mobile':
-                                    caption = '<div style="position: absolute; bottom: 0; height: 47px; background-color: #FFFFFF; width: 1024px;" class="pagination-centered"> <button id="btnExportDashMobile" class="btn btn-primary" >Exportar Imagem</button></div>';
+                                    caption = '<div style="position: absolute; bottom: 0; height: 47px; background-color: #FFFFFF; width: 1024px;" class="pagination-centered"> <button id="btnExportDashMobile" class="btn " >Versão para Exportação</button></div>';
                                     break;
                                 case 'mobileFake':
-                                    caption = '<div style="position: absolute; bottom: 0; height: 47px; background-color: #FFFFFF; width: 1024px;" class="pagination-centered"> <button id="btnExportDashMobile" class="btn btn-primary" >Exportar Imagem</button></div>';
+                                    caption = '<div style="position: absolute; bottom: 0; height: 47px; background-color: #FFFFFF; width: 1024px;" class="pagination-centered"> <button id="btnExportDashMobile" class="btn " >Versão para Exportação</button></div>';
                                     break;
                                 case 'web':
                                 default:
