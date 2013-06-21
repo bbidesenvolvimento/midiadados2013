@@ -25,7 +25,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 3
-        $context["__internal_2d6129e27883c5bc2725b24d6d3b08be5f749060"] = $this;
+        $context["__internal_c194a7bb010fb048039d88b36a9e264a3d6b21a0"] = $this;
         // line 5
         if ((!array_key_exists("colors", $context))) {
             // line 6
@@ -163,7 +163,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
         echo "
     ";
         // line 82
-        echo $context["__internal_2d6129e27883c5bc2725b24d6d3b08be5f749060"]->getdisplay_timeline(("timeline_" . $this->getContext($context, "token")), $this->getAttribute($this->getContext($context, "collector"), "events"), $this->getContext($context, "colors"));
+        echo $context["__internal_c194a7bb010fb048039d88b36a9e264a3d6b21a0"]->getdisplay_timeline(("timeline_" . $this->getContext($context, "token")), $this->getAttribute($this->getContext($context, "collector"), "events"), $this->getContext($context, "colors"));
         echo "
 
     ";
@@ -193,13 +193,13 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
 
             ";
                 // line 92
-                echo $context["__internal_2d6129e27883c5bc2725b24d6d3b08be5f749060"]->getdisplay_timeline(("timeline_" . $this->getAttribute($this->getContext($context, "child"), "token")), $this->getContext($context, "events"), $this->getContext($context, "colors"));
+                echo $context["__internal_c194a7bb010fb048039d88b36a9e264a3d6b21a0"]->getdisplay_timeline(("timeline_" . $this->getAttribute($this->getContext($context, "child"), "token")), $this->getContext($context, "events"), $this->getContext($context, "colors"));
                 echo "
         ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
-            $context = array_merge($_parent, array_intersect_key($context, $_parent));
+            $context = array_intersect_key($context, $_parent) + $_parent;
             // line 94
             echo "    ";
         }
@@ -510,7 +510,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
             \"requests\": [
 ";
         // line 393
-        echo $context["__internal_2d6129e27883c5bc2725b24d6d3b08be5f749060"]->getdump_request_data($this->getContext($context, "token"), $this->getContext($context, "profile"), $this->getAttribute($this->getContext($context, "collector"), "events"), $this->getAttribute($this->getAttribute($this->getAttribute($this->getContext($context, "collector"), "events"), "__section__"), "origin"));
+        echo $context["__internal_c194a7bb010fb048039d88b36a9e264a3d6b21a0"]->getdump_request_data($this->getContext($context, "token"), $this->getContext($context, "profile"), $this->getAttribute($this->getContext($context, "collector"), "events"), $this->getAttribute($this->getAttribute($this->getAttribute($this->getContext($context, "collector"), "events"), "__section__"), "origin"));
         echo "
 
 ";
@@ -537,7 +537,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
             }
             foreach ($context['_seq'] as $context["_key"] => $context["child"]) {
                 // line 398
-                echo $context["__internal_2d6129e27883c5bc2725b24d6d3b08be5f749060"]->getdump_request_data($this->getAttribute($this->getContext($context, "child"), "token"), $this->getContext($context, "child"), $this->getAttribute($this->getAttribute($this->getContext($context, "child"), "getcollector", array(0 => "time"), "method"), "events"), $this->getAttribute($this->getAttribute($this->getAttribute($this->getContext($context, "collector"), "events"), "__section__"), "origin"));
+                echo $context["__internal_c194a7bb010fb048039d88b36a9e264a3d6b21a0"]->getdump_request_data($this->getAttribute($this->getContext($context, "child"), "token"), $this->getContext($context, "child"), $this->getAttribute($this->getAttribute($this->getContext($context, "child"), "getcollector", array(0 => "time"), "method"), "events"), $this->getAttribute($this->getAttribute($this->getAttribute($this->getContext($context, "collector"), "events"), "__section__"), "origin"));
                 echo (($this->getAttribute($this->getContext($context, "loop"), "last")) ? ("") : (","));
                 echo "
 ";
@@ -552,7 +552,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
-            $context = array_merge($_parent, array_intersect_key($context, $_parent));
+            $context = array_intersect_key($context, $_parent) + $_parent;
         }
         // line 401
         echo "            ]
@@ -601,7 +601,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
         ob_start();
         try {
             // line 432
-            $context["__internal_453f6be0a6de5b3c2454aab832281414f6331183"] = $this;
+            $context["__internal_fa9c9305d314229d0ac5a51fe538f2ced0874407"] = $this;
             // line 433
             echo "                {
                     \"id\": \"";
@@ -615,7 +615,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
                     \"events\": [
 ";
             // line 437
-            echo $context["__internal_453f6be0a6de5b3c2454aab832281414f6331183"]->getdump_events($this->getContext($context, "events"));
+            echo $context["__internal_fa9c9305d314229d0ac5a51fe538f2ced0874407"]->getdump_events($this->getContext($context, "events"));
             echo "
                     ]
                 }
@@ -721,7 +721,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['_key'], $context['period'], $context['_parent'], $context['loop']);
-                    $context = array_merge($_parent, array_intersect_key($context, $_parent));
+                    $context = array_intersect_key($context, $_parent) + $_parent;
                     // line 456
                     echo "]
                         }";
@@ -741,7 +741,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['name'], $context['event'], $context['_parent'], $context['loop']);
-            $context = array_merge($_parent, array_intersect_key($context, $_parent));
+            $context = array_intersect_key($context, $_parent) + $_parent;
         } catch (Exception $e) {
             ob_end_clean();
 
@@ -782,7 +782,7 @@ class __TwigTemplate_a0cc9771850b3a8f14ef7f10d0c66973 extends Twig_Template
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['category'], $context['color'], $context['_parent'], $context['loop']);
-            $context = array_merge($_parent, array_intersect_key($context, $_parent));
+            $context = array_intersect_key($context, $_parent) + $_parent;
             // line 468
             echo "        </div>
         <canvas width=\"680\" height=\"\" id=\"";

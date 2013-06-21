@@ -58,8 +58,9 @@ class ItemController extends Controller
             foreach ($entities as $entitie) {
                 array_push($arr, array(
                 'titulo' => $entitie->getTitulo(),
-                'link' => "http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink(),
-                'segmento' => $categoria->getSegmento()
+                'link' => "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink(),
+                'segmento' => $categoria->getSegmento(),
+                'linkExport' => "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink(),
                 ));
                 //echo "\"titulo:"."\"".$entitie->getTitulo()."\",";
                 //echo "\"link:"."\"http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink()."\",";

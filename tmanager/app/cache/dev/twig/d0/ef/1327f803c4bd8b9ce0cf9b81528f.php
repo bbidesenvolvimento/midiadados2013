@@ -58,7 +58,7 @@ class __TwigTemplate_d0ef1327f803c4bd8b9ce0cf9b81528f extends Twig_Template
         ";
         } else {
             // line 12
-            echo "            <span class=\"sf-toolbar-info-class sf-toolbar-info-with-next-pointer\">";
+            echo "            <span class=\"sf-toolbar-info-class\">";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "collector"), "controller"), "html", null, true);
             echo "</span>
         ";
@@ -380,7 +380,7 @@ class __TwigTemplate_d0ef1327f803c4bd8b9ce0cf9b81528f extends Twig_Template
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
-            $context = array_merge($_parent, array_intersect_key($context, $_parent));
+            $context = array_intersect_key($context, $_parent) + $_parent;
             // line 159
             echo "    ";
         }

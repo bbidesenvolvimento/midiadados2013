@@ -358,7 +358,9 @@
     <parameter key="assetic.value_supplier.class">Symfony\Bundle\AsseticBundle\DefaultValueSupplier</parameter>
     <parameter key="assetic.node.paths" type="collection"/>
     <parameter key="assetic.cache_dir">/var/www/midiadados2013/tmanager/app/cache/dev/assetic</parameter>
-    <parameter key="assetic.bundles" type="collection"/>
+    <parameter key="assetic.bundles" type="collection">
+      <parameter>BbiTmanagerBundle</parameter>
+    </parameter>
     <parameter key="assetic.twig_extension.class">Symfony\Bundle\AsseticBundle\Twig\AsseticExtension</parameter>
     <parameter key="assetic.twig_formula_loader.class">Assetic\Extension\Twig\TwigFormulaLoader</parameter>
     <parameter key="assetic.helper.dynamic.class">Symfony\Bundle\AsseticBundle\Templating\DynamicAsseticHelper</parameter>
@@ -374,6 +376,31 @@
     <parameter key="assetic.node.bin">/usr/bin/node</parameter>
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
     <parameter key="assetic.sass.bin">/usr/bin/sass</parameter>
+    <parameter key="assetic.filter.cssembed.class">Assetic\Filter\CssEmbedFilter</parameter>
+    <parameter key="assetic.filter.cssembed.java">/usr/bin/java</parameter>
+    <parameter key="assetic.filter.cssembed.jar">/var/www/midiadados2013/tmanager/app/Resources/java/cssembed-0.4.5.jar</parameter>
+    <parameter key="assetic.filter.cssembed.timeout">null</parameter>
+    <parameter key="assetic.filter.cssembed.charset">UTF-8</parameter>
+    <parameter key="assetic.filter.cssembed.mhtml">false</parameter>
+    <parameter key="assetic.filter.cssembed.mhtml_root">null</parameter>
+    <parameter key="assetic.filter.cssembed.root">null</parameter>
+    <parameter key="assetic.filter.cssembed.skip_missing">false</parameter>
+    <parameter key="assetic.filter.cssembed.max_uri_length">null</parameter>
+    <parameter key="assetic.filter.cssembed.max_image_size">null</parameter>
+    <parameter key="assetic.filter.yui_js.class">Assetic\Filter\Yui\JsCompressorFilter</parameter>
+    <parameter key="assetic.filter.yui_js.java">/usr/bin/java</parameter>
+    <parameter key="assetic.filter.yui_js.jar">/var/www/midiadados2013/tmanager/app/Resources/java/yuicompressor.jar</parameter>
+    <parameter key="assetic.filter.yui_js.charset">UTF-8</parameter>
+    <parameter key="assetic.filter.yui_js.stacksize">null</parameter>
+    <parameter key="assetic.filter.yui_js.timeout">null</parameter>
+    <parameter key="assetic.filter.yui_js.nomunge">null</parameter>
+    <parameter key="assetic.filter.yui_js.preserve_semi">null</parameter>
+    <parameter key="assetic.filter.yui_js.disable_optimizations">null</parameter>
+    <parameter key="assetic.filter.lessphp.class">Assetic\Filter\LessphpFilter</parameter>
+    <parameter key="assetic.filter.lessphp.presets" type="collection"/>
+    <parameter key="assetic.filter.lessphp.paths" type="collection"/>
+    <parameter key="assetic.filter.lessphp.formatter">null</parameter>
+    <parameter key="assetic.filter.lessphp.preserve_comments">null</parameter>
     <parameter key="assetic.filter.cssrewrite.class">Assetic\Filter\CssRewriteFilter</parameter>
     <parameter key="assetic.twig_extension.functions" type="collection"/>
     <parameter key="assetic.controller.class">Symfony\Bundle\AsseticBundle\Controller\AsseticController</parameter>
@@ -462,8 +489,8 @@
     <parameter key="jms_di_extra.directories" type="collection"/>
     <parameter key="jms_di_extra.cache_dir">/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_5193a03a71ad8.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager5193a03a71ad8_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_51c3214c23dfd.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -1930,7 +1957,9 @@
             <argument type="service" id="templating.name_parser"/>
             <argument>true</argument>
             <argument type="collection"/>
-            <argument type="collection"/>
+            <argument type="collection">
+              <argument>BbiTmanagerBundle</argument>
+            </argument>
             <argument type="service" id="assetic.value_supplier.default"/>
           </service>
         </argument>
@@ -1996,12 +2025,20 @@
     <service id="assetic.filter_manager" class="Symfony\Bundle\AsseticBundle\FilterManager">
       <argument type="service" id="service_container"/>
       <argument type="collection">
+        <argument key="cssembed">assetic.filter.cssembed</argument>
+        <argument key="yui_js">assetic.filter.yui_js</argument>
+        <argument key="lessphp">assetic.filter.lessphp</argument>
         <argument key="cssrewrite">assetic.filter.cssrewrite</argument>
       </argument>
     </service>
     <service id="assetic.asset_manager" class="Assetic\Factory\LazyAssetManager">
       <argument type="service" id="assetic.asset_factory"/>
       <argument type="collection">
+        <argument key="config" type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Loader\ConfigurationLoader" public="false">
+            <tag name="assetic.formula_loader" alias="config"/>
+          </service>
+        </argument>
         <argument key="twig" type="service">
           <service class="Assetic\Factory\Loader\CachedFormulaLoader" public="false">
             <tag name="assetic.formula_loader" alias="twig"/>
@@ -2021,6 +2058,83 @@
           </service>
         </argument>
       </argument>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\ConfigurationResource" public="false">
+            <tag name="assetic.formula_resource" loader="config"/>
+            <argument type="collection">
+              <argument key="jquery_js" type="collection">
+                <argument type="collection">
+                  <argument>/var/www/midiadados2013/tmanager/app/app/Resources/public/js/vendor/jquery.js</argument>
+                </argument>
+                <argument type="collection">
+                  <argument>?yui_js</argument>
+                </argument>
+                <argument type="collection"/>
+              </argument>
+              <argument key="bootstrap_js" type="collection">
+                <argument type="collection">
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-transition.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-alert.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-modal.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-dropdown.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-scrollspy.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-tab.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-tooltip.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-popover.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-button.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-collapse.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-carousel.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-typeahead.js</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-affix.js</argument>
+                </argument>
+                <argument type="collection">
+                  <argument>?yui_js</argument>
+                </argument>
+                <argument type="collection"/>
+              </argument>
+              <argument key="bootstrap_less" type="collection">
+                <argument type="collection">
+                  <argument>/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/less/bootstrap.less</argument>
+                </argument>
+                <argument type="collection">
+                  <argument>lessphp</argument>
+                  <argument>cssembed</argument>
+                </argument>
+                <argument type="collection"/>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>config</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>BbiTmanagerBundle</argument>
+                  <argument>/var/www/midiadados2013/tmanager/app/Resources/BbiTmanagerBundle/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>BbiTmanagerBundle</argument>
+                  <argument>/var/www/midiadados2013/tmanager/src/Bbi/TmanagerBundle/Resources/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
       <call method="addResource">
         <argument type="service">
           <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource" public="false">
@@ -2045,6 +2159,15 @@
       <argument>true</argument>
       <call method="addWorker">
         <argument type="service">
+          <service class="Assetic\Factory\Worker\EnsureFilterWorker" public="false">
+            <tag name="assetic.factory_worker"/>
+            <argument>/\.less$/</argument>
+            <argument type="service" id="assetic.filter.lessphp"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addWorker">
+        <argument type="service">
           <service class="Symfony\Bundle\AsseticBundle\Factory\Worker\UseControllerWorker" public="false">
             <tag name="assetic.factory_worker"/>
           </service>
@@ -2053,6 +2176,74 @@
     </service>
     <service id="assetic.value_supplier.default" class="Symfony\Bundle\AsseticBundle\DefaultValueSupplier" public="false">
       <argument type="service" id="service_container"/>
+    </service>
+    <service id="assetic.filter.cssembed" class="Assetic\Filter\CssEmbedFilter">
+      <tag name="assetic.filter" alias="cssembed"/>
+      <argument>/var/www/midiadados2013/tmanager/app/Resources/java/cssembed-0.4.5.jar</argument>
+      <argument>/usr/bin/java</argument>
+      <call method="setTimeout">
+        <argument>null</argument>
+      </call>
+      <call method="setCharset">
+        <argument>UTF-8</argument>
+      </call>
+      <call method="setMhtml">
+        <argument>false</argument>
+      </call>
+      <call method="setMhtmlRoot">
+        <argument>null</argument>
+      </call>
+      <call method="setRoot">
+        <argument>null</argument>
+      </call>
+      <call method="setSkipMissing">
+        <argument>false</argument>
+      </call>
+      <call method="setMaxUriLength">
+        <argument>null</argument>
+      </call>
+      <call method="setMaxImageSize">
+        <argument>null</argument>
+      </call>
+    </service>
+    <service id="assetic.filter.yui_js" class="Assetic\Filter\Yui\JsCompressorFilter">
+      <tag name="assetic.filter" alias="yui_js"/>
+      <argument>/var/www/midiadados2013/tmanager/app/Resources/java/yuicompressor.jar</argument>
+      <argument>/usr/bin/java</argument>
+      <call method="setCharset">
+        <argument>UTF-8</argument>
+      </call>
+      <call method="setTimeout">
+        <argument>null</argument>
+      </call>
+      <call method="setStackSize">
+        <argument>null</argument>
+      </call>
+      <call method="setNomunge">
+        <argument>null</argument>
+      </call>
+      <call method="setPreserveSemi">
+        <argument>null</argument>
+      </call>
+      <call method="setDisableOptimizations">
+        <argument>null</argument>
+      </call>
+    </service>
+    <service id="assetic.filter.lessphp" class="Assetic\Filter\LessphpFilter">
+      <tag name="assetic.filter" alias="lessphp"/>
+      <file>/var/www/midiadados2013/tmanager/app/../vendor/leafo/lessphp/lessc.inc.php</file>
+      <call method="setPresets">
+        <argument type="collection"/>
+      </call>
+      <call method="setLoadPaths">
+        <argument type="collection"/>
+      </call>
+      <call method="setFormatter">
+        <argument>null</argument>
+      </call>
+      <call method="setPreserveComments">
+        <argument>null</argument>
+      </call>
     </service>
     <service id="assetic.filter.cssrewrite" class="Assetic\Filter\CssRewriteFilter">
       <tag name="assetic.filter" alias="cssrewrite"/>
@@ -2147,8 +2338,8 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager5193a03a71ad8_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_5193a03a71ad8.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_51c3214c23dfd.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>

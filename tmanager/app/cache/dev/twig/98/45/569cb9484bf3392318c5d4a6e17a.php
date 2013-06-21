@@ -127,7 +127,7 @@ class __TwigTemplate_9845569cb9484bf3392318c5d4a6e17a extends Twig_Template
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['value'], $context['text'], $context['_parent'], $context['loop']);
-        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 47
         echo "                    </select>
                     <noscript>
@@ -200,7 +200,7 @@ class __TwigTemplate_9845569cb9484bf3392318c5d4a6e17a extends Twig_Template
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['log'], $context['_parent'], $context['loop']);
-            $context = array_merge($_parent, array_intersect_key($context, $_parent));
+            $context = array_intersect_key($context, $_parent) + $_parent;
             // line 71
             echo "        </ul>
     ";

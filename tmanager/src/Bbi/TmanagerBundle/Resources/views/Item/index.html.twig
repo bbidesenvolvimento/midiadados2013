@@ -1,3 +1,6 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
 <h1>Item list</h1>
 
 <ul>
@@ -17,7 +20,6 @@
             <th>Actions</th>
         </tr>
     </thead>
-    <tbody>
     {% for entity in entities %}
         <tr>
             <td><a href="{{ path('item_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
@@ -35,7 +37,7 @@
             </td>
         </tr>
     {% endfor %}
-    </tbody>
 </table>
 
 
+{% endblock %}
