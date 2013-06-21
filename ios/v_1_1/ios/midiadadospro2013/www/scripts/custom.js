@@ -117,9 +117,15 @@ $(window).load(function () {
     switch (mode) {
 
         case 'mobile':
-            FRAME_HEIGHT = 768;
+            FRAME_HEIGHT = 795 + 20;// 768;
             MENU_LINK_ONLINE = 'http://mdb2013.bbi.net.br/scripts_mdb/json2.php';
             app.initialize();
+            break;
+        case 'mobileFake':
+            FRAME_HEIGHT = 795 + 20;// 768;
+            MENU_LINK_ONLINE = 'http://mdb2013.bbi.net.br/scripts_mdb/json2.php';
+            isOffline = true;
+            loadMenu();
             break;
         case 'web':
         default:
@@ -272,6 +278,7 @@ function generateApp(menuData) {
             for (var i = 0; i < menuData[key].length; i++) {
 
                 var elm = menuData[key][i];
+                var linkExport = isOffline ? 'NO_EXPORT' : elm.linkExport;
                 var lastItem = i == menuData[key].length - 1 ? '1' : "0";
                 var idash = $('<a href="javascript:void(0);" ' +
                     'id="menuItem' + key + i + '" ' +
@@ -283,7 +290,9 @@ function generateApp(menuData) {
                     'data-index="' + i + '" ' +
                     'data-last="' + lastItem + '" ' +
                     'data-sectiontitle="' + value.title + '" ' +
+                    'data-linkexport="' + linkExport + '"' +
                     'data-element="' + baseURL + elm.link + '">' + elm.titulo + '</a>\n' +
+
 
                     '<em class="submenu-decoration"></em>\n');
                 listItensDash.push(idash);
@@ -384,13 +393,17 @@ function generateApp(menuData) {
                             switch (mode) {
 
                                 case 'mobile':
-
+                                    caption = '<div style="position: absolute; bottom: 0; height: 47px; background-color: #FFFFFF; width: 1024px;" class="pagination-centered"> <button id="btnExportDashMobile" class="btn btn-primary" >Exportar Imagem</button></div>';
+                                    break;
+                                case 'mobileFake':
+                                    caption = '<div style="position: absolute; bottom: 0; height: 47px; background-color: #FFFFFF; width: 1024px;" class="pagination-centered"> <button id="btnExportDashMobile" class="btn btn-primary" >Exportar Imagem</button></div>';
                                     break;
                                 case 'web':
                                 default:
                                     caption = ' <div id="dashCaptions"></div>';
                                     break;
                             }
+
                             $('#theContentContainer').html(
 
                                 '<div id="myFrame" style=" -webkit-transition: all .1s linear ; width:' + FRAME_WIDTH + 'px;height: ' + FRAME_HEIGHT + 'px;" >' +
@@ -404,6 +417,12 @@ function generateApp(menuData) {
 
 
                             );
+
+                            $("#btnExportDashMobile").click(function () {
+                                var link = $(currentElement).data('linkexport');
+                                console.log(link);
+                                window.open(link, '_system');
+                            });
 
                             resizeIframe();
                         }
@@ -528,9 +547,9 @@ function generateApp(menuData) {
             'height': $(window).height()
         });
 
-        $("#initMovie").click(function(){
+        $("#initMovie").click(function () {
             window.open('http://www.google.com.br/ads', '_system');
-          //  window.open("http://www.google.com.br/ads")
+            //  window.open("http://www.google.com.br/ads")
         });
 
         $("#initMovie").fadeIn('slow', function () {    //slow
