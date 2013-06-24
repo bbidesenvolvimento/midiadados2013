@@ -1,10 +1,8 @@
 <?php
+// Sem exportação
 
 $cat = $_GET['cat'];
 $sub = $_GET['sub'];
-
-//https://srv.bbi.net.br/views/TVPORASSINATURA/PERFILPENETRAOEEVOLUODAPENETRAODOMEIO?:embed=yes&:toolbar=yes
-//processo para pegar o link com sessão mais atual para o grafico
  
 $server = "srv.bbi.net.br";
 $user = "midiadados";
@@ -27,11 +25,6 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
   return http_parse_message(http_post_fields("http://$wgserver/trusted", $params))->body;
 }
 
-/*echo "<pre>";
-var_dump($cat);
-var_dump($sub);
-echo "</pre>";*/
- 
 switch ($cat) {
 	case 'mercadoDemografia':
 		header("Location:". get_trusted_url($user,$server,'views/'.$sub));

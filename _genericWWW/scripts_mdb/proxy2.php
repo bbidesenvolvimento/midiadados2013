@@ -1,19 +1,16 @@
 ﻿<?php
+// Com exportação
 
 $cat = $_GET['cat'];
 $sub = $_GET['sub'];
 
-//https://srv.bbi.net.br/views/TVPORASSINATURA/PERFILPENETRAOEEVOLUODAPENETRAODOMEIO?:embed=yes&:toolbar=yes
-//processo para pegar o link com sessão mais atual para o grafico
- 
 $server = "srv.bbi.net.br";
 $user = "midiadados";
-//$clientIp = (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '');
+
 
 function get_trusted_url($user,$server,$view_url) {
 	$params = ':embed=yes&:toolbar=yes';
 	$ticket = get_trusted_ticket($server, $user, $_SERVER['REMOTE_ADDR']);
-	//$ticket = get_trusted_ticket($server, $user, $clientIp);
 
 	if($ticket > 0) {
 		return "https://$server/trusted/$ticket/$view_url?$params";
