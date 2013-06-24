@@ -36,7 +36,7 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
     margin-right: 0px !important;
     width: 100%;
     height: 20px;
-    bottom: 0;
+    bottom: 150px;
     position: absolute;
 
 }
