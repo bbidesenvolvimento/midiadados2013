@@ -11,7 +11,7 @@ assetic:
   assets:
     jquery_js:
         inputs:
-            - '%kernel.root_dir%/app/Resources/public/js/vendor/jquery.js'
+            - '%kernel.root_dir%/Resources/public/jquery.js'
         filters: [?yui_js]
     bootstrap_js:
         inputs:

@@ -75,7 +75,7 @@ class appDevDebugProjectContainer extends Container
 
         $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('config' => new \Symfony\Bundle\AsseticBundle\Factory\Loader\ConfigurationLoader(), 'twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('/var/www/midiadados2013/tmanager/app/cache/dev/assetic/config'), true)));
 
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\ConfigurationResource(array('jquery_js' => array(0 => array(0 => '/var/www/midiadados2013/tmanager/app/app/Resources/public/js/vendor/jquery.js'), 1 => array(0 => '?yui_js'), 2 => array()), 'bootstrap_js' => array(0 => array(0 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-transition.js', 1 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-alert.js', 2 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-modal.js', 3 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-dropdown.js', 4 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-scrollspy.js', 5 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-tab.js', 6 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-tooltip.js', 7 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-popover.js', 8 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-button.js', 9 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-collapse.js', 10 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-carousel.js', 11 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-typeahead.js', 12 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-affix.js'), 1 => array(0 => '?yui_js'), 2 => array()), 'bootstrap_less' => array(0 => array(0 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/less/bootstrap.less'), 1 => array(0 => 'lessphp', 1 => 'cssembed'), 2 => array()))), 'config');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\ConfigurationResource(array('jquery_js' => array(0 => array(0 => '/var/www/midiadados2013/tmanager/app/Resources/public/jquery.js'), 1 => array(0 => '?yui_js'), 2 => array()), 'bootstrap_js' => array(0 => array(0 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-transition.js', 1 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-alert.js', 2 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-modal.js', 3 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-dropdown.js', 4 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-scrollspy.js', 5 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-tab.js', 6 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-tooltip.js', 7 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-popover.js', 8 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-button.js', 9 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-collapse.js', 10 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-carousel.js', 11 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-typeahead.js', 12 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/js/bootstrap-affix.js'), 1 => array(0 => '?yui_js'), 2 => array()), 'bootstrap_less' => array(0 => array(0 => '/var/www/midiadados2013/tmanager/app/../vendor/twitter/bootstrap/less/bootstrap.less'), 1 => array(0 => 'lessphp', 1 => 'cssembed'), 2 => array()))), 'config');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BbiTmanagerBundle', '/var/www/midiadados2013/tmanager/app/Resources/BbiTmanagerBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BbiTmanagerBundle', '/var/www/midiadados2013/tmanager/src/Bbi/TmanagerBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, '', '/var/www/midiadados2013/tmanager/app/Resources/views', '/\\.[^.]+\\.twig$/'), 'twig');
 
@@ -338,11 +338,11 @@ class appDevDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
+     * @return EntityManager51c85b59435d7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager51c85b59435d7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_51c3214c23dfd.php';
+        require_once '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_51c85b59435d7.php';
 
         $a = new \Doctrine\Common\Cache\ArrayCache();
         $a->setNamespace('sf2orm_default_fdf53308ecc5a27015de41549231db03');
@@ -372,7 +372,7 @@ class appDevDebugProjectContainer extends Container
         $f = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $e);
         $this->get('doctrine.orm.default_manager_configurator')->configure($f);
 
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($f, $this);
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager51c85b59435d7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($f, $this);
     }
 
     /**
@@ -2653,7 +2653,7 @@ class appDevDebugProjectContainer extends Container
     /**
      * Gets the doctrine.orm.entity_manager service alias.
      *
-     * @return EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
+     * @return EntityManager51c85b59435d7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
      */
     protected function getDoctrine_Orm_EntityManagerService()
     {
@@ -3510,8 +3510,8 @@ class appDevDebugProjectContainer extends Container
             ),
             'jms_di_extra.cache_dir' => '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra',
             'jms_di_extra.doctrine_integration' => true,
-            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_51c3214c23dfd.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager51c3214c23dfd_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/midiadados2013/tmanager/app/cache/dev/jms_diextra/doctrine/EntityManager_51c85b59435d7.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager51c85b59435d7_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'security.secured_services' => array(
 
             ),

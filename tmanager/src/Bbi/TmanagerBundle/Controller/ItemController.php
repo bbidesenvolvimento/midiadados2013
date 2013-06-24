@@ -19,7 +19,7 @@ use Bbi\TmanagerBundle\Form\ItemType;
 class ItemController extends Controller
 {
     /**
-     * Lists all Item entities.
+     * Lists all Item entities. @Route("/{id}/show", name="item_show")
      *
      * @Route("/", name="item")
      * @Template()
@@ -28,11 +28,13 @@ class ItemController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria(12);
-        
+        $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria(1);
+
+        $entitiescat = $em->getRepository('BbiTmanagerBundle:Categoria')->findAll();
 
         return array(
             'entities' => $entities,
+            'entitiescat' => $entitiescat
             );
     }
 

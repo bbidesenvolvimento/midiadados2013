@@ -28,7 +28,7 @@ class __TwigTemplate_e4490a2297517b15837c33f18ee09cf2 extends Twig_Template
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Item list</h1>
+        echo "<h1>Itens do Segmento</h1>
 
 <ul>
     <li>
@@ -41,6 +41,29 @@ class __TwigTemplate_e4490a2297517b15837c33f18ee09cf2 extends Twig_Template
     </li>
 </ul>
 
+<select id=\"cats\">
+    ";
+        // line 15
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getContext($context, "entitiescat"));
+        foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
+            // line 16
+            echo "    <option value=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item", array("cat" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
+            echo "\">
+        ";
+            // line 17
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "segmento"), "html", null, true);
+            echo "
+    </option>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 20
+        echo "</select>
+
 <table class=\"records_list\">
     <thead>
         <tr>
@@ -51,51 +74,63 @@ class __TwigTemplate_e4490a2297517b15837c33f18ee09cf2 extends Twig_Template
         </tr>
     </thead>
     ";
-        // line 23
+        // line 31
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getContext($context, "entities"));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 24
-            echo "        <tr>
-            <td><a href=\"";
-            // line 25
+            // line 32
+            echo "    <tr>
+        <td><a href=\"";
+            // line 33
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item_show", array("id" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "id"), "html", null, true);
             echo "</a></td>
-            <td>";
-            // line 26
+        <td>";
+            // line 34
             echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "titulo"), "html", null, true);
             echo "</td>
-            <td>";
-            // line 27
+        <td>";
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "link"), "html", null, true);
             echo "</td> 
-            <td>
-                <ul>
-                    <li>
-                        <a href=\"";
-            // line 31
+        <td>
+            <ul>
+                <li>
+
+                    <a href=\"";
+            // line 40
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item_show", array("id" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
             echo "\">show</a>
-                    </li>
+                </li>
                     <li>
-                        <a href=\"";
-            // line 34
+                    <a href=\"";
+            // line 43
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("item_edit", array("id" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
-            echo "\">edit</a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
+            echo "\">
+                    <i class=\"icon-edit\"></i>Editar</a>
+                </li>
+            </ul>
+        </td>
+    </tr>
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 50
         echo "</table>
 
+<script type=\"text/javascript\">
+/*
+   \$('#cats').bind('change', function () { // bind change event to select
+        var url = \$(this).val(); // get selected value
+        if (url != '') { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });*/
+</script>
 
 ";
     }
@@ -112,6 +147,6 @@ class __TwigTemplate_e4490a2297517b15837c33f18ee09cf2 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  97 => 40,  85 => 34,  79 => 31,  72 => 27,  68 => 26,  62 => 25,  59 => 24,  55 => 23,  37 => 8,  31 => 4,  28 => 3,);
+        return array (  122 => 50,  109 => 43,  103 => 40,  95 => 35,  91 => 34,  85 => 33,  82 => 32,  78 => 31,  65 => 20,  56 => 17,  51 => 16,  47 => 15,  37 => 8,  31 => 4,  28 => 3,);
     }
 }

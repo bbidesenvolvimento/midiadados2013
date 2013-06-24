@@ -49,4 +49,4 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
    	 </div>
    	 </center>
 </iframe>
-  </div>
+</div>
