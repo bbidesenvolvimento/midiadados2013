@@ -1,6 +1,6 @@
 <?php 
 
-/** Usa O PROXY1 - sem barra de exportação **/
+/** Usa O PROXY2 - COM barra de exportação **/
 
 header ('Content-type: text/html; charset=utf-8');
 header('Access-Control-Allow-Origin: *');

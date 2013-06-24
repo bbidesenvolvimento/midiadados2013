@@ -41,21 +41,19 @@ class ItemController extends Controller
     /**
      * Lists all Item entities.
      *
-     * @Route("/json", name="json")
+     * @Route("/json2", name="json2")
      * @Template()
      */
-    public function jsonAction()
+    public function json2Action()
     {
         header('Content-Type: text/html; charset=utf-8');
         $em = $this->getDoctrine()->getManager();
         
         $categorias = $em->getRepository('BbiTmanagerBundle:Categoria')->findAll();
-        //$entities = $em->getRepository('BbiTmanagerBundle:Item')->findAll();
    
     $arr = array();
     foreach ($categorias as $categoria) {
             $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria($categoria->getId());
-            //echo "\"".$categoria->getNome()."\":[{";
             array_push($arr, $categoria->getNome());
             foreach ($entities as $entitie) {
                 array_push($arr, array(
@@ -64,16 +62,11 @@ class ItemController extends Controller
                 'segmento' => $categoria->getSegmento(),
                 'linkExport' => "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink(),
                 ));
-                //echo "\"titulo:"."\"".$entitie->getTitulo()."\",";
-                //echo "\"link:"."\"http://www.bbi.net.br/proxy.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink()."\",";
-                //echo "\"ad:"."\"\"},".'';
             }
-            //echo "],";
     }
-    // echo"<pre>";
-    // var_dump($arr);
-    // echo"</pre>";
+
     $json = json_encode($arr);
+
     echo $json;
 
 
@@ -82,6 +75,44 @@ class ItemController extends Controller
             'categorias' => $categorias,
             );
     }
+
+    /**
+     * Lists all Item entities.
+     *
+     * @Route("/json3", name="json3")
+     * @Template()
+     */
+    public function json3Action()
+    {
+        header('Content-Type: text/html; charset=utf-8');
+        $em = $this->getDoctrine()->getManager();
+        
+        $categorias = $em->getRepository('BbiTmanagerBundle:Categoria')->findAll();
+   
+    $arr = array();
+    foreach ($categorias as $categoria) {
+            $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria($categoria->getId());
+            // Versão WEB com exportação
+            array_push($arr, $categoria->getNome());
+            foreach ($entities as $entitie) {
+                array_push($arr, array(
+                'titulo' => $entitie->getTitulo(),
+                'link' => "http://mdb2013.bbi.net.br/scripts_mdb/proxy2.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink(),
+                'segmento' => $categoria->getSegmento(),
+                'linkExport' => "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=" .$categoria->getNome().'&sub='.$entitie->getLink(),
+                ));
+            }
+    }
+    $json = json_encode($arr);
+
+    echo $json;
+
+        return array(
+            'entities' => $entities,
+            'categorias' => $categorias,
+            );
+    }
+
 
     /**
      * Lists all Item entities.

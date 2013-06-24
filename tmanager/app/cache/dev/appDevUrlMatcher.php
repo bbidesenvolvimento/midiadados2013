@@ -344,9 +344,14 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\ItemController::indexAction',  '_route' => 'item',);
                 }
 
-                // json
-                if ($pathinfo === '/item/json') {
-                    return array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\ItemController::jsonAction',  '_route' => 'json',);
+                // json2
+                if ($pathinfo === '/item/json2') {
+                    return array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\ItemController::json2Action',  '_route' => 'json2',);
+                }
+
+                // json3
+                if ($pathinfo === '/item/json3') {
+                    return array (  '_controller' => 'Bbi\\TmanagerBundle\\Controller\\ItemController::json3Action',  '_route' => 'json3',);
                 }
 
                 // jsonoff

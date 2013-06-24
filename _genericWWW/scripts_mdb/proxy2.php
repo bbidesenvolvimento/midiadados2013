@@ -26,11 +26,6 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
   );
   return http_parse_message(http_post_fields("http://$wgserver/trusted", $params))->body;
 }
-
-/*echo "<pre>";
-var_dump($cat);
-var_dump($sub);
-echo "</pre>";*/
  
 switch ($cat) {
 	case 'mercadoDemografia':
@@ -74,8 +69,4 @@ switch ($cat) {
 		break;
  	default:
 		break;
-}
-
-
-//$novoLink = "http://exmplo.com.br?sessionID=adfaiodfya98ifdh98ayf";
-//header("Location:". $novoLink);
+} 
