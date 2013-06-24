@@ -177,16 +177,16 @@ echo '[
     },
     "adHoc",
     {
-        "titulo": "DATA FAVELA - DISTRIBUIÇÃO E NÍVEL DE ENSINO NAS COMUNIDADES",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy2.php?cat=adHoc&sub=DATAFAVELA-DISTRIBUIOENVELDEENSINONASCOMUNIDAD/DATAFAVELA-DISTRIBUIOENVELDEENSINONASCOMUNIDADES",
+        "titulo": "DATA POPULAR - DISTRIBUIÇÃO E NÍVEL DE ENSINO",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy2.php?cat=adHoc&sub=DATAPOPULAR-DISTRIBUIOENVELDEENSINO/DATAPOPULAR-DISTRIBUIOENVELDEENSINO",
         "segmento": "Ad Hoc",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=adHoc&sub=DATAFAVELA-DISTRIBUIOENVELDEENSINONASCOMUNIDAD/DATAFAVELA-DISTRIBUIOENVELDEENSINONASCOMUNIDADES"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=adHoc&sub=DATAPOPULAR-DISTRIBUIOENVELDEENSINO/DATAPOPULAR-DISTRIBUIOENVELDEENSINO"
     },
     {
-        "titulo": "DATA FAVELA - PERFIL DE BENS E COMPRA",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy2.php?cat=adHoc&sub=DATAFAVELA-PERFILDEBENSECOMPRA/DATAFAVELA-PERFILDEBENSECOMPRA",
+        "titulo": "PERFIL DE BENS E COMPRA",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy2.php?cat=adHoc&sub=DATAPOPULAR-PERFILDEBENSECOMPRA/DATAPOPULAR-PERFILDEBENSECOMPRA",
         "segmento": "Ad Hoc",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=adHoc&sub=DATAFAVELA-PERFILDEBENSECOMPRA/DATAFAVELA-PERFILDEBENSECOMPRA"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=adHoc&sub=DATAPOPULAR-PERFILDEBENSECOMPRA/DATAPOPULAR-PERFILDEBENSECOMPRA"
     },
     {
         "titulo": "ALIMENTAÇÃO",
