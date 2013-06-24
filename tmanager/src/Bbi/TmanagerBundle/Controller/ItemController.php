@@ -28,7 +28,7 @@ class ItemController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria(3);
+        $entities = $em->getRepository('BbiTmanagerBundle:Item')->findByCategoria(10);
 
         $entitiescat = $em->getRepository('BbiTmanagerBundle:Categoria')->findAll();
 
