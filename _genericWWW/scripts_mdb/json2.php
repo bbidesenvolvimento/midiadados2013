@@ -107,10 +107,10 @@ echo '[
         "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=EVOLUODOINVESTIMENTOBRUTOEMMDIAPORMEIO/EVOLUODOINVESTIMENTOBRUTOEMMDIAPORMEIO"
     },
     {
-        "titulo": "FATURAMENTO BRUTO MENSAL DE MÍDIA POR MEIO - INTER-MEIOS",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=mercadoDemografia&sub=FATURAMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS/FATURAMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS",
+        "titulo": "FATURAMENTO BRUTO MENSAL DE MÍDIA POR MEIO - INTER-MEIOS - 2012 (%)",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=mercadoDemografia&sub=INVESTIMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS-/INVESTIMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS-2012",
         "segmento": "Mercado e Demografia",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=FATURAMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS/FATURAMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=INVESTIMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS-/INVESTIMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS-2012"
     },
     {
         "titulo": "DISTRIBUIÇÃO DO FATURAMENTO BRUTO POR REGIÃO INTER-MEIOS 2012",
@@ -144,9 +144,9 @@ echo '[
     },
     {
         "titulo": "MAIORES ANUNCIANTES - MERCADO",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=mercadoDemografia&sub=MAIORESANUNCIANTESMERCADO/MAIORESANUNCIANTESMERCADO",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=mercadoDemografia&sub=MAIORESANUNCIANTES-MERCADO/MAIORESANUNCIANTES-MERCADO",
         "segmento": "Mercado e Demografia",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=MAIORESANUNCIANTESMERCADO/MAIORESANUNCIANTESMERCADO"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=MAIORESANUNCIANTES-MERCADO/MAIORESANUNCIANTES-MERCADO"
     },
     {
         "titulo": "30 MAIORES ANUNCIANTES POR MEIO",
