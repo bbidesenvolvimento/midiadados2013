@@ -1,6 +1,6 @@
 <?php 
 
-/** Usa O PROXY2 - COM barra de exportação **/
+/** Usa O proxy - COM barra de exportação **/
 
 header ('Content-type: text/html; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
@@ -110,10 +110,10 @@ echo '[
         "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=EVOLUODOINVESTIMENTOBRUTOEMMDIAPORMEIO/EVOLUODOINVESTIMENTOBRUTOEMMDIAPORMEIO"
     },
     {
-        "titulo": "FATURAMENTO BRUTO MENSAL DE MÍDIA POR MEIO - INTER-MEIOS - 2012 (%)",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=mercadoDemografia&sub=INVESTIMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS-/INVESTIMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS-2012",
+        "titulo": "FATURAMENTO BRUTO MENSAL DE MÍDIA POR MEIO - INTER-MEIOS",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=mercadoDemografia&sub=FATURAMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS/FATURAMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS",
         "segmento": "Mercado e Demografia",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=INVESTIMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS-/INVESTIMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS-2012"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=FATURAMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS/FATURAMENTOBRUTOMENSALDEMDIAPORMEIO-INTER-MEIOS"
     },
     {
         "titulo": "DISTRIBUIÇÃO DO FATURAMENTO BRUTO POR REGIÃO INTER-MEIOS 2012",
@@ -147,9 +147,9 @@ echo '[
     },
     {
         "titulo": "MAIORES ANUNCIANTES - MERCADO",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=mercadoDemografia&sub=MAIORESANUNCIANTES-MERCADO/MAIORESANUNCIANTES-MERCADO",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=mercadoDemografia&sub=MAIORESANUNCIANTESMERCADO/MAIORESANUNCIANTESMERCADO",
         "segmento": "Mercado e Demografia",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=MAIORESANUNCIANTES-MERCADO/MAIORESANUNCIANTES-MERCADO"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=mercadoDemografia&sub=MAIORESANUNCIANTESMERCADO/MAIORESANUNCIANTESMERCADO"
     },
     {
         "titulo": "30 MAIORES ANUNCIANTES POR MEIO",
@@ -177,16 +177,16 @@ echo '[
     },
     "adHoc",
     {
-        "titulo": "DATA FAVELA - DISTRIBUIÇÃO E NÍVEL DE ENSINO NAS COMUNIDADES",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=adHoc&sub=DATAFAVELA-DISTRIBUIOENVELDEENSINONASCOMUNIDAD/DATAFAVELA-DISTRIBUIOENVELDEENSINONASCOMUNIDADES",
+        "titulo": "DATA POPULAR - DISTRIBUIÇÃO E NÍVEL DE ENSINO",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=adHoc&sub=DATAPOPULAR-DISTRIBUIOENVELDEENSINO/DATAPOPULAR-DISTRIBUIOENVELDEENSINO",
         "segmento": "Ad Hoc",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=adHoc&sub=DATAFAVELA-DISTRIBUIOENVELDEENSINONASCOMUNIDAD/DATAFAVELA-DISTRIBUIOENVELDEENSINONASCOMUNIDADES"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=adHoc&sub=DATAPOPULAR-DISTRIBUIOENVELDEENSINO/DATAPOPULAR-DISTRIBUIOENVELDEENSINO"
     },
     {
-        "titulo": "DATA FAVELA - PERFIL DE BENS E COMPRA",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=adHoc&sub=DATAFAVELA-PERFILDEBENSECOMPRA/DATAFAVELA-PERFILDEBENSECOMPRA",
+        "titulo": "PERFIL DE BENS E COMPRA",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=adHoc&sub=DATAPOPULAR-PERFILDEBENSECOMPRA/DATAPOPULAR-PERFILDEBENSECOMPRA",
         "segmento": "Ad Hoc",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=adHoc&sub=DATAFAVELA-PERFILDEBENSECOMPRA/DATAFAVELA-PERFILDEBENSECOMPRA"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=adHoc&sub=DATAPOPULAR-PERFILDEBENSECOMPRA/DATAPOPULAR-PERFILDEBENSECOMPRA"
     },
     {
         "titulo": "ALIMENTAÇÃO",
@@ -336,10 +336,10 @@ echo '[
         "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=radio&sub=PROJEODEDOMICLIOSCOMRDIO-2013/PROJEODEDOMICLIOSCOMRDIO-2013"
     },
     {
-        "titulo": "PERFIL DO CONSUMIDORES DO MEIO",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=radio&sub=PERFILDOCONSUMIDORESDOMEIO/PERFILDOCONSUMIDORESDOMEIO",
+        "titulo": "PERFIL DOS CONSUMIDORES DO MEIO",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=radio&sub=PERFILDOSCONSUMIDORESDOMEIO/PERFILDOSCONSUMIDORESDOMEIO",
         "segmento": "Rádio",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=radio&sub=PERFILDOCONSUMIDORESDOMEIO/PERFILDOCONSUMIDORESDOMEIO"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=radio&sub=PERFILDOSCONSUMIDORESDOMEIO/PERFILDOSCONSUMIDORESDOMEIO"
     },
     {
         "titulo": "COBERTURA DOS PRINCIPAIS MERCADOS",
@@ -550,16 +550,16 @@ echo '[
         "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=midiaOutHome&sub=PERFILDEMOGRFICOEPENETRAO/PERFILDEMOGRFICOEPENETRAO"
     },
     {
-        "titulo": "COBERTURA DE OUT-OF-HOME EM UMA SEMANA POR TIPO DE SUPORTE/CLASSE ECONÔMICA",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=midiaOutHome&sub=COBERTURADEOUT-OF-HOMEEMUMASEMANACLASSEECONMI/COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPODESUPORTECLASSEECONMICA",
+        "titulo": "COBERTURA DE OUT-OF-HOME EM UMA SEMANA POR TIPO",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=midiaOutHome&sub=COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPO/COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPO",
         "segmento": "Mídia Out of Home",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=midiaOutHome&sub=COBERTURADEOUT-OF-HOMEEMUMASEMANACLASSEECONMI/COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPODESUPORTECLASSEECONMICA"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=midiaOutHome&sub=COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPO/COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPO"
     },
     {
-        "titulo": "COBERTURA DE OUT-OF-HOME EM UMA SEMANA POR TIPO DE SUPORTE/ MERCADO",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=midiaOutHome&sub=COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPODESUPO/COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPODESUPORTEMERCADO",
+        "titulo": "COBERTURA DE OUT-OF-HOME EM UMA SEMANA POR MERCADO",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=midiaOutHome&sub=COBERTURADEOUT-OF-HOMEEMUMASEMANAPORMERCADO/COBERTURADEOUT-OF-HOMEEMUMASEMANAPORMERCADO",
         "segmento": "Mídia Out of Home",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=midiaOutHome&sub=COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPODESUPO/COBERTURADEOUT-OF-HOMEEMUMASEMANAPORTIPODESUPORTEMERCADO"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=midiaOutHome&sub=COBERTURADEOUT-OF-HOMEEMUMASEMANAPORMERCADO/COBERTURADEOUT-OF-HOMEEMUMASEMANAPORMERCADO"
     },
     {
         "titulo": "NÚMEROS DE LOCAIS/ CARTAZES POR ESTADO/ CAPITAIS",
@@ -617,10 +617,10 @@ echo '[
         "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=midiaDigital&sub=PERFILEPENETRAODOINTERNAUTABRASILEIRO/PERFILEPENETRAODOINTERNAUTABRASILEIRO"
     },
     {
-        "titulo": "EVOLUÇÃO DA PENETRAÇÃO DE INTERNET POR MERCADO E ACESSO À INTERNET ULT 3 DIAS POR MERCADO",
-        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=midiaDigital&sub=EVOLUODAPENETRAODEINTERNETPORMERCADOEACESSO/EVOLUODAPENETRAODEINTERNETPORMERCADOEACESSOINTERNETULT3DIASPORMERCADO",
+        "titulo": "EVOLUÇÃO DA PENETRAÇÃO DE INTERNET POR MERCADO E ACESSO",
+        "link": "http://mdb2013.bbi.net.br/scripts_mdb/proxy.php?cat=midiaDigital&sub=EVOLUODAPENETRAODEINTERNETPORMERCADOEACESSO/EVOLUODAPENETRAODEINTERNETPORMERCADOEACESSO",
         "segmento": "Mídia Digital",
-        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=midiaDigital&sub=EVOLUODAPENETRAODEINTERNETPORMERCADOEACESSO/EVOLUODAPENETRAODEINTERNETPORMERCADOEACESSOINTERNETULT3DIASPORMERCADO"
+        "linkExport": "http://mdb2013.bbi.net.br/scripts_mdb/export.php?cat=midiaDigital&sub=EVOLUODAPENETRAODEINTERNETPORMERCADOEACESSO/EVOLUODAPENETRAODEINTERNETPORMERCADOEACESSO"
     },
     {
         "titulo": "INTERNAUTAS NA POPULAÇÃO - 2012",
