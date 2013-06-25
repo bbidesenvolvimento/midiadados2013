@@ -36,7 +36,7 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
     margin-right: 0px !important;
     width: 100%;
     height: 20px;
-    bottom: 150px;
+    bottom: 0;
     position: absolute;
 
 }
@@ -45,7 +45,7 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
 <center>
   <div id="conteudo">
    	 <iframe align="middle" src="<?php echo get_trusted_url($user,$server,'views/'.$sub); ?>" width="1024" height="815" frameborder="0"/></iframe>
-   	 <div id="#legenda"><img src="legendas.png"></img></div>
+   	 <div id="#legenda" style="margin-bottom:200px"><img src="legendas.png"></img></div>
    	 </div>
    	 </center>
 </iframe>
