@@ -551,6 +551,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MidiaDadosPro2013/MidiaDadosPro2013-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../Downloads/GAPlugin-master/src/GA\"",
+				);
 				PRODUCT_NAME = MidiaDadosPro2013;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -570,6 +574,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MidiaDadosPro2013/MidiaDadosPro2013-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../Downloads/GAPlugin-master/src/GA\"",
+				);
 				PRODUCT_NAME = MidiaDadosPro2013;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -587,6 +595,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MidiaDadosPro2013/MidiaDadosPro2013-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../Downloads/GAPlugin-master/src/GA\"",
+				);
 				PRODUCT_NAME = MidiaDadosPro2013;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
