@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0110D44817868793007B6CD4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0110D44717868793007B6CD4 /* CoreData.framework */; };
 		018FE43C17455A3E00CD3347 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 018FE43B17455A3E00CD3347 /* Default-Landscape~ipad.png */; };
 		019F419A1744B38800C8767B /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = 019F41991744B38800C8767B /* 57.png */; };
 		019F419C1744B38A00C8767B /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 019F419B1744B38A00C8767B /* 114.png */; };
@@ -70,6 +71,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0110D44717868793007B6CD4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0110D44A17868C43007B6CD4 /* GoogleAnalyticsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleAnalyticsPlugin.h; sourceTree = "<group>"; };
+		0110D44B17868C43007B6CD4 /* GoogleAnalyticsPlugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GoogleAnalyticsPlugin.js; sourceTree = "<group>"; };
+		0110D44C17868C43007B6CD4 /* GoogleAnalyticsPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleAnalyticsPlugin.m; sourceTree = "<group>"; };
+		0110D44E17868C43007B6CD4 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
+		0110D44F17868C43007B6CD4 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		0110D45017868C43007B6CD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0110D45517868C90007B6CD4 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		018FE43B17455A3E00CD3347 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		019F41991744B38800C8767B /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
 		019F419B1744B38A00C8767B /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
@@ -130,6 +139,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301BF5BD109A6A2B0062928A /* CFNetwork.framework in Frameworks */,
+				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
+				0110D44817868793007B6CD4 /* CoreData.framework in Frameworks */,
 				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -139,11 +151,9 @@
 				301BF5B7109A6A2B0062928A /* AddressBookUI.framework in Frameworks */,
 				301BF5B9109A6A2B0062928A /* AudioToolbox.framework in Frameworks */,
 				301BF5BB109A6A2B0062928A /* AVFoundation.framework in Frameworks */,
-				301BF5BD109A6A2B0062928A /* CFNetwork.framework in Frameworks */,
 				301BF5BF109A6A2B0062928A /* CoreLocation.framework in Frameworks */,
 				301BF5C1109A6A2B0062928A /* MediaPlayer.framework in Frameworks */,
 				301BF5C3109A6A2B0062928A /* QuartzCore.framework in Frameworks */,
-				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
 			);
@@ -152,6 +162,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0110D44917868C43007B6CD4 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				0110D44A17868C43007B6CD4 /* GoogleAnalyticsPlugin.h */,
+				0110D44B17868C43007B6CD4 /* GoogleAnalyticsPlugin.js */,
+				0110D44C17868C43007B6CD4 /* GoogleAnalyticsPlugin.m */,
+				0110D44D17868C43007B6CD4 /* GoogSDK */,
+				0110D45017868C43007B6CD4 /* README.md */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		0110D44D17868C43007B6CD4 /* GoogSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0110D44E17868C43007B6CD4 /* GANTracker.h */,
+				0110D44F17868C43007B6CD4 /* libGoogleAnalytics.a */,
+			);
+			path = GoogSDK;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +223,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				0110D45517868C90007B6CD4 /* libsqlite3.0.dylib */,
+				0110D44717868793007B6CD4 /* CoreData.framework */,
 				018FE43B17455A3E00CD3347 /* Default-Landscape~ipad.png */,
 				019F41AE1744B42C00C8767B /* Default-Portrait~ipad.png */,
 				019F41A91744B3E200C8767B /* Default-Landscape@2x~ipad.png */,
@@ -274,6 +307,7 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				0110D44917868C43007B6CD4 /* GoogleAnalytics */,
 			);
 			name = Plugins;
 			path = MidiaDadosPro2013/Plugins;
@@ -533,7 +567,7 @@
 					"-all_load",
 					"-Obj-C",
 				);
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos6.1;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -551,6 +585,11 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MidiaDadosPro2013/MidiaDadosPro2013-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MidiaDadosPro2013/Plugins/GoogleAnalytics/GoogSDK\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = MidiaDadosPro2013;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -570,6 +609,11 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MidiaDadosPro2013/MidiaDadosPro2013-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MidiaDadosPro2013/Plugins/GoogleAnalytics/GoogSDK\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = MidiaDadosPro2013;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -587,6 +631,11 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MidiaDadosPro2013/MidiaDadosPro2013-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MidiaDadosPro2013/Plugins/GoogleAnalytics/GoogSDK\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = MidiaDadosPro2013;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -628,7 +677,7 @@
 					"-all_load",
 					"-Obj-C",
 				);
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos6.1;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -670,7 +719,7 @@
 					"-all_load",
 					"-Obj-C",
 				);
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos6.1;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
