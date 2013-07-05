@@ -59,7 +59,10 @@
         <plugin name="Battery" value="CDVBattery" />
         <plugin name="Globalization" value="CDVGlobalization" />
         <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+        
+
     </plugins>
 
-    <access origin="*" />     
+    <access origin="*" />
+    <access uri="google-analytics" subdomains="true" />
 </widget>
