@@ -9,10 +9,7 @@
 
 
 function startGA(){
-    console.log('GA STARTED');
-  //  window.GA.trackerWithTrackingId("UA-41162029-1");
-    //window.GA.trackView("/index");
-    
+    console.log('GA STARTED')
  //  window.plugins.analytics.start("UA-41162029-1", function(){console.log("GA SUCCESS");}, function(){console.log("GA: failure");});
 }
 
@@ -20,8 +17,8 @@ function startGA(){
 
 
 function trackAndroidGAEvent(category, action, label, value){
-    //console.log('trackAndroidGAEvent',1,category,2, action,3, label,4, value)
-   //window.GA.trackEvent(category, action, event, 1, onSuccessGAEvent,onFailGAEvent);
+    console.log('trackAndroidGAEvent',1,category,2, action,3, label,4, value)
+ //   window.plugins.analytics.trackEvent(category, action, event, 1, onSuccessGAEvent,onFailGAEvent);
 }
 
 function onSuccessGAEvent(){
