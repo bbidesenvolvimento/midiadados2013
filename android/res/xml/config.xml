@@ -40,6 +40,7 @@
     <preference name="fullscreen" value="true" />
     <preference name="keepRunning " value="false" />
     <preference name="EnableViewportScale" value="true" />
+    <preference name="webviewbounce" value="false" />
 
 
 
@@ -49,7 +50,7 @@
     <plugin name="App" value="org.apache.cordova.App"/>
     <plugin name="Device" value="org.apache.cordova.Device"/>
    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
-
+  <plugin name="GoogleAnalyticsTracker" value="com.phonegap.plugins.analytics.GoogleAnalyticsTracker" />
 </plugins>
 </cordova>
 

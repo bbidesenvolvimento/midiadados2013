@@ -112,7 +112,7 @@ $(window).load(function () {
     //  console.log(navigator.network.connection.type);
     // mobile || web
 
-    mode = 'mobile';
+    mode = 'web';
 
     switch (mode) {
 
@@ -255,6 +255,7 @@ var listItensDash = [];
 
 function generateApp(menuData) {
     var counter = 0;
+    startGA();
     $.each(dashes, function (key, value) {
         if (menuData[key]) {
             var s = value.color;
@@ -417,6 +418,8 @@ function generateApp(menuData) {
 
 
                             );
+
+                            trackAndroidGAEvent('android', $(elem).data("sectiontitle"),  $(elem).data('title'), 1);
 
                             $("#btnExportDashMobile").click(function () {
                                 var link = $(currentElement).data('linkexport');
