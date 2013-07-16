@@ -114,11 +114,13 @@
     <file path="/exclusive.js" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373937900947" ignored="false" />
     <file path="/GoogleAnalyticsTracker.java" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1372915711882" ignored="false" />
     <file path="$PROJECT_DIR$/android/gen/br/net/bbi/BuildConfig.java" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373941709643" ignored="false" />
-    <file path="$PROJECT_DIR$/../../projetos_eclipse/BOE02/src/controller/DataController.as" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373988168659" ignored="false" />
+    <file path="$PROJECT_DIR$/../../projetos_eclipse/BOE02/src/controller/DataController.as" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373989113682" ignored="false" />
     <file path="$PROJECT_DIR$/../../projetos_eclipse/BOE02/src/controller/GameController.as" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373987596291" ignored="false" />
-    <file path="$PROJECT_DIR$/../../projetos_eclipse/BOE02/output/app/data/_gameConfig.txt" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373987886816" ignored="false" />
-    <file path="/_gameConfig.txt" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373987815755" ignored="false" />
-    <file path="/DataController.as" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373988165150" ignored="false" />
+    <file path="$PROJECT_DIR$/../../projetos_eclipse/BOE02/output/app/data/_gameConfig.txt" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373988817019" ignored="false" />
+    <file path="/_gameConfig.txt" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373988817019" ignored="false" />
+    <file path="/DataController.as" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373988699757" ignored="false" />
+    <file path="$PROJECT_DIR$/../../projetos_eclipse/BOE02/output/app/services/loadGame.php" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373989490520" ignored="false" />
+    <file path="$PROJECT_DIR$/../../projetos_eclipse/BOE02/output/app/services/login.php" changelist="c741ec4b-0952-43ee-b2e2-1d9f02177038" time="1373989389925" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,10 +186,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_genericWWW/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="0" selection-start="7626" selection-end="7626" vertical-scroll-proportion="-0.65384614">
+            <state line="167" column="0" selection-start="7626" selection-end="7626" vertical-scroll-proportion="0.682243">
               <folding />
             </state>
           </provider>
@@ -196,10 +198,8 @@
       <file leaf-file-name="exclusive.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_genericWWW/exclusive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="61" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1373938309299" expanded="true" signature="176:1308" placeholder="{...}" />
-              </folding>
+            <state line="21" column="2" selection-start="634" selection-end="1170" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -223,16 +223,16 @@
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/res/xml/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="2" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0">
+            <state line="52" column="2" selection-start="2075" selection-end="2075" vertical-scroll-proportion="-26.384615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="47" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+            <state line="1" column="158" selection-start="107" selection-end="107" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -717,7 +717,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-1088" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-1088" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -871,43 +871,6 @@
         <state line="152" column="0" selection-start="6845" selection-end="6904" vertical-scroll-proportion="0.42512077" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_genericWWW/exclusive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="61" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1373938309299" expanded="true" signature="176:1308" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_genericWWW/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="0" selection-start="7626" selection-end="7626" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_genericWWW/scripts/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="49" selection-start="2685" selection-end="2685" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1373938352772" expanded="false" signature="6685:6726" placeholder="..." />
-            <marker date="1373938352772" expanded="false" signature="6915:6936" placeholder="..." />
-            <marker date="1373938352772" expanded="false" signature="12959:13045" placeholder="..." />
-            <marker date="1373938352772" expanded="false" signature="13316:13402" placeholder="..." />
-            <marker date="1373938352772" expanded="false" signature="13921:13965" placeholder="..." />
-            <marker date="1373938352772" expanded="false" signature="21012:21039" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/res/xml/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="2" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ios/v_1_1/ios/midiadadospro2013/www/analytics.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="52" selection-start="251" selection-end="251" vertical-scroll-proportion="0.09637188">
@@ -931,7 +894,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/android/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="47" selection-start="38" selection-end="38" vertical-scroll-proportion="-0.0">
+        <state line="1" column="158" selection-start="107" selection-end="107" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/res/xml/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="2" selection-start="2075" selection-end="2075" vertical-scroll-proportion="-26.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_genericWWW/scripts/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="49" selection-start="2685" selection-end="2685" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1373938352772" expanded="false" signature="6685:6726" placeholder="..." />
+            <marker date="1373938352772" expanded="false" signature="6915:6936" placeholder="..." />
+            <marker date="1373938352772" expanded="false" signature="12959:13045" placeholder="..." />
+            <marker date="1373938352772" expanded="false" signature="13316:13402" placeholder="..." />
+            <marker date="1373938352772" expanded="false" signature="13921:13965" placeholder="..." />
+            <marker date="1373938352772" expanded="false" signature="21012:21039" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_genericWWW/exclusive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="2" selection-start="634" selection-end="1170" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_genericWWW/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="0" selection-start="7626" selection-end="7626" vertical-scroll-proportion="0.682243">
           <folding />
         </state>
       </provider>
