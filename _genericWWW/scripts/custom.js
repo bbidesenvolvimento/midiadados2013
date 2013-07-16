@@ -110,7 +110,7 @@ var mode = '';
 $(window).load(function () {
     $('#theHeader').css('opacity', 0);
     //  console.log(navigator.network.connection.type);
-    // mobile || web
+    // mobile || web  ||mobileFake
 
     mode = 'web';
 
