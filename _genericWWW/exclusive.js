@@ -38,8 +38,9 @@ function startGA(){
 
 
 function trackAndroidGAEvent(category, action, label, value){
-    console.log('trackWebGAEvent',1,category,2, action,3, label,4, value)
-    _gaq.push(['_trackEvent', category, action, label, value]);
+    console.log('trackWebGAEvent',1,category,2, action,3, label,4, value) ;
+    ga('_trackEvent', category, action, label, value);
+    //_gaq.push(['_trackEvent', category, action, label, value]);
  //   window.plugins.analytics.trackEvent(category, action, event, 1, onSuccessGAEvent,onFailGAEvent);
 }
 
