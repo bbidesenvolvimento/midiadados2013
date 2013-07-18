@@ -10,15 +10,14 @@
 
 function startGA(){
     console.log("start ga");
-   /* (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-42475130-1', 'bbi.net.br');
+    ga('create', 'UA-42475130-1', 'mdb2013.bbi.net.br');
     ga('send', 'pageview');
-    */
-
+/*
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-42475130-1']);
     _gaq.push(['_trackPageview']);
@@ -30,7 +29,7 @@ function startGA(){
     })();
 
     _gaq.push(['_setDomainName', 'none']);
-    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_setAllowLinker', true]);*/
 
  //  window.plugins.analytics.start("UA-41162029-1", function(){console.log("GA SUCCESS");}, function(){console.log("GA: failure");});
 }
